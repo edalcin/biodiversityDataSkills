@@ -1,6 +1,6 @@
 # biodiversityDataSkills
 
-A collection of skills for biodiversity data, built on the [Darwin Core](https://dwc.tdwg.org/) standard.
+A collection of AI skills for biodiversity data.
 
 ## Skills in this repository
 
@@ -10,7 +10,7 @@ A collection of skills for biodiversity data, built on the [Darwin Core](https:/
 
 ## About
 
-This repository contains skills for the [pi](https://pi.dev) / [skills.sh](https://www.skills.sh/) ecosystem, focused on biodiversity data following the standards maintained by [TDWG](https://www.tdwg.org/).
+This repository contains AI skills for the [pi](https://pi.dev) / [skills.sh](https://www.skills.sh/) ecosystem, focused on biodiversity data.
 
 ## License
 

@@ -1,3 +1,5 @@
+[![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills)
+
 # biodiversityDataSkills
 
 A collection of AI skills for biodiversity data, designed for the [pi](https://pi.dev) / [skills.sh](https://www.skills.sh/) ecosystem.

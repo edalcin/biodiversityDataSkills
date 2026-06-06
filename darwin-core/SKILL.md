@@ -162,3 +162,9 @@ This skill knows about all GBIF-registered extensions ([https://rs.gbif.org/exte
 | Taxon Description | `gbif/1.0/Description` | Taxon |
 
 See [references/EXTENSIONS.md](references/EXTENSIONS.md) for full details.
+
+---
+
+## Related Skills
+
+**[skos-xl](../skos-xl/)** — Use alongside this skill to define the controlled vocabularies for Darwin Core term values (e.g. `basisOfRecord`, `occurrenceStatus`, `habitat`) as SKOS RDF. Also supports the TDWG TAG NameThing pattern for representing taxonomic names with full nomenclatural provenance.

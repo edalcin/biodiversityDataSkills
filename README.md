@@ -1,14 +1,27 @@
 
 # biodiversityDataSkills
 
-A collection of AI skills for biodiversity data, designed for the [pi](https://pi.dev) / [skills.sh](https://www.skills.sh/) ecosystem.
+A collection of AI skills for biodiversity data, designed for the [skills.sh](https://www.skills.sh/) ecosystem. Each skill provides scripts, reference data, and documentation to help researchers, data managers, and biodiversity informaticians work with standards-compliant data.
 
 ## Skills
 
-| Skill | Description |
+| Skill | Description | Key dependency |
+|---|---|---|
+| [darwin-core](./darwin-core/) | Work with Darwin Core and Darwin Core Archive (DwC-A) | `pandas`, `python-dwca-reader` |
+| [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies, with Darwin Core integration | `rdflib` |
+
+## Skills Interoperability
+
+The two skills complement each other. Darwin Core defines **what fields** a biodiversity dataset uses; SKOS defines the **controlled vocabularies** (the valid values) for those fields as Linked Data.
+
+| Use case | Skills |
 |---|---|
-| [darwin-core](./darwin-core/) | Work with Darwin Core and Darwin Core Archive (DwC-A) |
-| [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies, with Darwin Core integration |
+| Publish occurrence data with standardized term values | darwin-core + skos-xl |
+| Define a controlled vocabulary for `basisOfRecord` as RDF | skos-xl (`dwc-vocab` template) |
+| Represent taxonomic names with nomenclatural provenance | skos-xl (`dwc-names` template) |
+| Map a legacy CSV to Darwin Core terms | darwin-core (`map_columns.py`) |
+| Validate a DwC-A archive | darwin-core (`validate.py`) |
+| Align an institutional vocabulary to GBIF/TDWG terms | skos-xl (`skos:exactMatch`) |
 
 ---
 

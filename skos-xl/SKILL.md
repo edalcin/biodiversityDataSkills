@@ -259,3 +259,9 @@ python scripts/generate.py bryophytes --template dwc-names
 - [SKOS Core schema](references/skos_core.rdf) — official W3C RDF/OWL (after `sync.py`)
 - [SKOS-XL schema](references/skos_xl.rdf) — official W3C RDF/OWL (after `sync.py`)
 - [TDWG TAG NameThing](references/tdwg_skosxl_name.ttl) — Turtle example (after `sync.py`)
+
+---
+
+## Related Skills
+
+**[darwin-core](../darwin-core/)** — Use alongside this skill to package and validate occurrence data. Darwin Core defines the fields; SKOS defines the controlled vocabularies for the values. The `dwc-vocab` template generates SKOS representations of any Darwin Core controlled term.

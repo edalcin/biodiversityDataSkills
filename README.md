@@ -8,6 +8,107 @@ A collection of AI skills for biodiversity data, designed for the [pi](https://p
 | Skill | Description |
 |---|---|
 | [darwin-core](./darwin-core/) | Work with Darwin Core and Darwin Core Archive (DwC-A) |
+| [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies, with Darwin Core integration |
+
+---
+
+## skos-xl
+
+This skill helps researchers, data managers, and biodiversity informaticians build and maintain [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) and [SKOS-XL](https://www.w3.org/TR/skos-reference/skos-xl.html) controlled vocabularies as Linked Data (RDF). It is particularly focused on Darwin Core vocabulary integration, following the [TDWG TAG SKOS-XL patterns](https://github.com/tdwg/tag/tree/master/skos-xl).
+
+### What is SKOS?
+
+SKOS is a W3C standard for representing thesauri, classification schemes, subject heading lists, and taxonomies in RDF. A **SKOS vocabulary** is an RDF file that contains:
+- `skos:ConceptScheme` — the vocabulary container
+- `skos:Concept` instances — individual controlled terms
+- `skos:broader` / `skos:narrower` — hierarchical relationships
+- `skos:prefLabel` / `skos:altLabel` — labels with language tags
+- `skos:exactMatch` / `skos:closeMatch` — cross-vocabulary alignment links
+
+**SKOS-XL** extends SKOS by making labels first-class RDF resources (`skosxl:Label`), enabling provenance, metadata, and relationships to be attached to individual labels — not just to concepts. The TDWG TAG uses this to model taxonomic names with parsed components (genus, epithet, authorship, basionym links).
+
+### Setup
+
+Requires Python 3.9+ and `rdflib`:
+
+```bash
+pip install -r skos-xl/requirements.txt
+```
+
+### Scripts
+
+```
+sync.py → explain.py → generate.py → validate.py → convert.py
+```
+
+---
+
+#### 1. `sync.py` — Download reference schemas
+
+Downloads the official W3C SKOS/SKOS-XL RDF/OWL schemas and TDWG TAG Turtle examples.
+
+```bash
+python skos-xl/scripts/sync.py
+```
+
+---
+
+#### 2. `explain.py` — Explore the standard
+
+Reference guide for SKOS and SKOS-XL terms with definitions and usage notes.
+
+```bash
+python skos-xl/scripts/explain.py                  # SKOS overview
+python skos-xl/scripts/explain.py --term broader   # Explain a specific term
+python skos-xl/scripts/explain.py --list           # List all SKOS terms
+python skos-xl/scripts/explain.py --xl             # SKOS-XL overview
+python skos-xl/scripts/explain.py --xl --term Label
+```
+
+---
+
+#### 3. `generate.py` — Generate a vocabulary template
+
+Three templates cover the most common biodiversity use cases:
+
+| Template | Use case |
+|---|---|
+| `basic` (default) | Generic SKOS vocabulary with hierarchy |
+| `dwc-vocab` | DwC controlled vocabulary (basisOfRecord, sex, habitat, …) |
+| `dwc-names` | Taxonomic name vocabulary (TDWG TAG NameThing, SKOS-XL) |
+
+```bash
+python skos-xl/scripts/generate.py my_vocab
+python skos-xl/scripts/generate.py basisOfRecord --template dwc-vocab
+python skos-xl/scripts/generate.py bryophytes --template dwc-names
+python skos-xl/scripts/generate.py my_vocab --xl --format jsonld --lang pt
+```
+
+---
+
+#### 4. `validate.py` — Validate a SKOS file
+
+Validates Turtle, RDF/XML, JSON-LD, N-Triples, or N3 files against 8 checks:
+- Parse integrity, ConceptScheme presence, `inScheme` links
+- `prefLabel` presence, duplicate prefLabel detection (S14)
+- Disjointness constraints, S27 relation integrity
+- SKOS-XL `literalForm` cardinality
+
+```bash
+python skos-xl/scripts/validate.py vocab.ttl
+python skos-xl/scripts/validate.py vocab.ttl --verbose
+```
+
+---
+
+#### 5. `convert.py` — Convert format or label style
+
+```bash
+python skos-xl/scripts/convert.py vocab.rdf --to-format turtle
+python skos-xl/scripts/convert.py vocab.ttl --to-xl            # plain → SKOS-XL
+python skos-xl/scripts/convert.py vocab_xl.ttl --from-xl       # SKOS-XL → plain
+python skos-xl/scripts/convert.py vocab.ttl --to-xl --to-format jsonld
+```
 
 ---
 

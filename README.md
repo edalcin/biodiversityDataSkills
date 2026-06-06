@@ -1,4 +1,3 @@
-[![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills)
 
 # biodiversityDataSkills
 

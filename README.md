@@ -29,7 +29,11 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 
 ## skos-xl
 
-This skill helps researchers, data managers, and biodiversity informaticians build and maintain [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) and [SKOS-XL](https://www.w3.org/TR/skos-reference/skos-xl.html) controlled vocabularies as Linked Data (RDF). It is particularly focused on Darwin Core vocabulary integration, following the [TDWG TAG SKOS-XL patterns](https://github.com/tdwg/tag/tree/master/skos-xl).
+This skill helps researchers, data managers, and biodiversity informaticians build and maintain [SKOS](https://www.w3.org/TR/skos-reference/) (Simple Knowledge Organization System) and [SKOS-XL](https://www.w3.org/TR/skos-reference/skos-xl.html) controlled vocabularies as Linked Data (RDF). It covers three domains:
+
+1. **Generic vocabularies** — thesauri, classification schemes, concept hierarchies
+2. **Darwin Core integration** — controlled vocabularies for DwC terms; taxonomic name vocabularies using the [TDWG TAG SKOS-XL patterns](https://github.com/tdwg/tag/tree/master/skos-xl)
+3. **Traditional Knowledge (CTA)** — vocabularies for *Conhecimento Tradicional Associado à Biodiversidade*, with per-label access control, multilingual indigenous labels, [CARE principles](https://www.gida-global.org/care), and [Nagoya Protocol](https://www.cbd.int/abs/) compliance metadata
 
 ### What is SKOS?
 
@@ -40,7 +44,7 @@ SKOS is a W3C standard for representing thesauri, classification schemes, subjec
 - `skos:prefLabel` / `skos:altLabel` — labels with language tags
 - `skos:exactMatch` / `skos:closeMatch` — cross-vocabulary alignment links
 
-**SKOS-XL** extends SKOS by making labels first-class RDF resources (`skosxl:Label`), enabling provenance, metadata, and relationships to be attached to individual labels — not just to concepts. The TDWG TAG uses this to model taxonomic names with parsed components (genus, epithet, authorship, basionym links).
+**SKOS-XL** extends SKOS by making labels first-class RDF resources (`skosxl:Label`), enabling provenance, metadata, and relationships to be attached to individual labels — not just to concepts. This is essential for Traditional Knowledge vocabularies: the scientific name of a species may be public while the sacred ritual name in an indigenous language is restricted — granularity that is impossible with `skos:prefLabel` literals.
 
 ### Setup
 
@@ -128,6 +132,77 @@ python skos-xl/scripts/convert.py vocab.ttl --to-xl            # plain → SKOS-
 python skos-xl/scripts/convert.py vocab_xl.ttl --from-xl       # SKOS-XL → plain
 python skos-xl/scripts/convert.py vocab.ttl --to-xl --to-format jsonld
 ```
+
+---
+
+### Traditional Knowledge (CTA)
+
+**CTA** (*Conhecimento Tradicional Associado à Biodiversidade*) vocabularies encode indigenous knowledge about plants, animals, and ecosystems together with the governance metadata that ethical use requires.
+
+**Why SKOS-XL?** Access restrictions exist at the *label* level, not the concept level. The scientific name of a plant can be public while the sacred ritual name in an indigenous language is restricted — granularity that is impossible with plain `skos:prefLabel` literals. SKOS-XL makes each label a first-class RDF resource that can carry provenance, community attribution, and access control independently.
+
+#### Access levels (`etno:accessLevel`)
+
+| Value | Meaning |
+|---|---|
+| `public` | Available to anyone |
+| `restricted` | Researchers only; requires FPIC under Nagoya Protocol |
+| `community-only` | Members of the originating community only |
+| `sacred` | Never publish without explicit community consent |
+
+#### CARE Principles
+
+| Principle | Key properties |
+|---|---|
+| **C**ollective | `prov:wasAttributedTo`, `etno:sourcePeople` — attribute knowledge to originating people |
+| **A**uthority | `dct:rightsHolder`, `etno:accessLevel`, `etno:validatedBy` — community controls its own data |
+| **R**esponsibility | `dct:source`, `etno:nagoyaStatus`, `prov:hadPrimarySource` — traceable provenance |
+| **E**thics | `etno:consentType`, `etno:languageStatus`, `dct:license` — respect restrictions; do no harm |
+
+#### Workflow
+
+**1. Generate a CTA vocabulary template:**
+
+```bash
+python skos-xl/scripts/generate.py etnotermos --template etno-tk --lang pt
+```
+
+Creates a Turtle file with:
+- `skos:ConceptScheme` with `dct:rightsHolder` and `dct:license` (TK Label)
+- Labels in Portuguese, Guarani Mbya (`@gnm`), and Latin for a plant concept
+- A `sacred` label in Huni Kuĩ (`@hux`) with `etno:accessLevel sacred` alongside a public Spanish label — demonstrating per-label access control
+- `prov:Agent` resources for each indigenous people
+- `dwc:vernacularName` bridge for Darwin Core interoperability
+
+**2. Explore CTA properties:**
+
+```bash
+python skos-xl/scripts/explain.py --cta                       # overview: CARE, Nagoya, access levels
+python skos-xl/scripts/explain.py --cta --list                # all 17 CTA properties
+python skos-xl/scripts/explain.py --cta --term accessLevel    # specific property
+python skos-xl/scripts/explain.py --cta --term nagoyaStatus
+```
+
+**3. Validate CARE / Nagoya compliance:**
+
+```bash
+python skos-xl/scripts/validate.py etnotermos.ttl --cta --verbose
+```
+
+Runs 5 CTA checks on top of the 8 standard SKOS checks:
+- `dct:rightsHolder` present on `ConceptScheme` (CARE Authority)
+- `dct:license` present (TK Label recommended)
+- `etno:accessLevel` on every `skosxl:Label`
+- Attribution (`prov:wasAttributedTo` or `etno:sourcePeople`) for labels in indigenous languages
+- Validation record (`etno:validatedBy`) for `restricted`, `community-only`, and `sacred` labels
+
+#### Key references
+
+- [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
+- [Nagoya Protocol — CBD](https://www.cbd.int/abs/)
+- [Local Contexts TK Labels](https://localcontexts.org/labels/traditional-knowledge-labels/)
+- [EtnoTermos — JBRJ](https://etnotermos.jbrj.gov.br/)
+- [ISO 639-3 (indigenous language codes)](https://iso639-3.sil.org/)
 
 ---
 

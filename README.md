@@ -8,7 +8,7 @@ A collection of AI skills for biodiversity data, designed for the [skills.sh](ht
 | Skill | Description | Key dependency |
 |---|---|---|
 | [darwin-core](./darwin-core/) | Work with Darwin Core and Darwin Core Archive (DwC-A) | `pandas`, `python-dwca-reader` |
-| [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies, with Darwin Core integration | `rdflib` |
+| [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies — generic, Darwin Core, and Traditional Knowledge (CTA/CARE/Nagoya) | `rdflib` |
 
 ## Skills Interoperability
 
@@ -19,6 +19,8 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 | Publish occurrence data with standardized term values | darwin-core + skos-xl |
 | Define a controlled vocabulary for `basisOfRecord` as RDF | skos-xl (`dwc-vocab` template) |
 | Represent taxonomic names with nomenclatural provenance | skos-xl (`dwc-names` template) |
+| Build a Traditional Knowledge vocabulary (CTA/EtnoTermos) | skos-xl (`etno-tk` template) |
+| Per-label access control for indigenous knowledge (sacred/restricted) | skos-xl (`etno-tk` + `--cta` validation) |
 | Map a legacy CSV to Darwin Core terms | darwin-core (`map_columns.py`) |
 | Validate a DwC-A archive | darwin-core (`validate.py`) |
 | Align an institutional vocabulary to GBIF/TDWG terms | skos-xl (`skos:exactMatch`) |
@@ -89,11 +91,13 @@ Three templates cover the most common biodiversity use cases:
 | `basic` (default) | Generic SKOS vocabulary with hierarchy |
 | `dwc-vocab` | DwC controlled vocabulary (basisOfRecord, sex, habitat, …) |
 | `dwc-names` | Taxonomic name vocabulary (TDWG TAG NameThing, SKOS-XL) |
+| `etno-tk` | Traditional Knowledge (CTA/EtnoTermos) with CARE + Nagoya metadata |
 
 ```bash
 python skos-xl/scripts/generate.py my_vocab
 python skos-xl/scripts/generate.py basisOfRecord --template dwc-vocab
 python skos-xl/scripts/generate.py bryophytes --template dwc-names
+python skos-xl/scripts/generate.py etnotermos --template etno-tk --lang pt
 python skos-xl/scripts/generate.py my_vocab --xl --format jsonld --lang pt
 ```
 
@@ -101,15 +105,17 @@ python skos-xl/scripts/generate.py my_vocab --xl --format jsonld --lang pt
 
 #### 4. `validate.py` — Validate a SKOS file
 
-Validates Turtle, RDF/XML, JSON-LD, N-Triples, or N3 files against 8 checks:
+Validates Turtle, RDF/XML, JSON-LD, N-Triples, or N3 files. Standard (8 checks) + optional CTA checks (`--cta`):
 - Parse integrity, ConceptScheme presence, `inScheme` links
 - `prefLabel` presence, duplicate prefLabel detection (S14)
 - Disjointness constraints, S27 relation integrity
 - SKOS-XL `literalForm` cardinality
+- CTA: `dct:rightsHolder`, `dct:license`, `etno:accessLevel`, attribution, sacred-label validation
 
 ```bash
 python skos-xl/scripts/validate.py vocab.ttl
 python skos-xl/scripts/validate.py vocab.ttl --verbose
+python skos-xl/scripts/validate.py etnotermos.ttl --cta --verbose
 ```
 
 ---

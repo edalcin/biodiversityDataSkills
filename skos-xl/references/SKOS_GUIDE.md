@@ -248,6 +248,171 @@ Reference: https://github.com/tdwg/tag/tree/master/skos-xl
 
 ---
 
+---
+
+## Traditional Knowledge (CTA) Pattern — EtnoTermos
+
+### Context
+
+Traditional Knowledge Associated with Biodiversity (CTA / Conhecimento Tradicional Associado)
+requires a vocabulary architecture that is:
+- **Polyglot**: multiple indigenous languages, each with its own metadata
+- **Polyphonic**: multiple communities may name the same species differently
+- **Governed**: per-label access control (public / restricted / sacred)
+- **Attributed**: provenance traceable to the originating people (CARE principles)
+- **Compliant**: Nagoya Protocol on Access and Benefit-Sharing
+
+SKOS-XL is the correct choice because access restrictions live at the *label* level,
+not the concept level. The scientific name of a plant may be public while the sacred
+ritual name is restricted — impossible to model with `skos:prefLabel` literals.
+
+### Namespaces
+
+```turtle
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix etno:   <http://example.org/etno/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dwc:    <http://rs.tdwg.org/dwc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+```
+
+### Full EtnoTermos Pattern (Turtle)
+
+```turtle
+# ── ConceptScheme (CARE Authority) ──────────────────────────────
+:EtnoTermos a skos:ConceptScheme ;
+    skos:prefLabel "EtnoTermos - Vocabulario de Conhecimento Tradicional"@pt ;
+    dct:rightsHolder "Conselho Aty Guasu"^^xsd:string ;
+    dct:license <https://localcontexts.org/labels/traditional-knowledge-labels/> ;
+    etno:nagoyaStatus "compliant" .
+
+# ── Ethnotaxonomic category (NOT a western-science category) ────
+:plantas-medicinais a skos:Concept ;
+    skos:inScheme :EtnoTermos ;
+    skos:topConceptOf :EtnoTermos ;
+    skos:prefLabel "Plantas medicinais"@pt ;
+    skos:scopeNote "Categoria etnotaxonomica; nao mapeada 1:1 para taxonomia ocidental."@pt .
+
+# ── Concept with multilingual labels ───────────────────────────
+:jatoba a skos:Concept ;
+    skos:inScheme :EtnoTermos ;
+    skos:broader :plantas-medicinais ;
+    dwc:vernacularName "Jatoba" .
+
+# Portuguese label (public)
+:label/jatoba-pt a skosxl:Label ;
+    skosxl:literalForm "Jatoba"@pt ;
+    dct:language "pt" ;
+    etno:accessLevel "public" .
+:jatoba skosxl:prefLabel :label/jatoba-pt .
+
+# Guarani Mbya label (ISO 639-3: gnm) — public, community-validated
+:label/jatoba-guarani a skosxl:Label ;
+    skosxl:literalForm "Jutai"@gnm ;
+    dct:language "gnm" ;
+    etno:sourcePeople "Guarani Mbya" ;
+    etno:sourceRegion "Mata Atlantica meridional" ;
+    etno:accessLevel "public" ;
+    etno:validatedBy "Conselho Aty Guasu" ;
+    prov:wasAttributedTo :povo/guarani-mbya ;
+    dct:source <https://doi.org/10.XXXX/etno2019> ;
+    etno:nagoyaStatus "compliant" .
+:jatoba skosxl:altLabel :label/jatoba-guarani .
+
+# Scientific name as alternative label (public)
+:label/jatoba-sci a skosxl:Label ;
+    skosxl:literalForm "Hymenaea courbaril L."@la ;
+    dct:type "scientificName" ;
+    etno:accessLevel "public" ;
+    dct:source <https://floradobrasil.jbrj.gov.br/FB23011> .
+:jatoba skosxl:altLabel :label/jatoba-sci .
+:jatoba skos:exactMatch <https://floradobrasil.jbrj.gov.br/FB23011> .
+
+# ── Concept with RESTRICTED/SACRED label ───────────────────────
+:ayahuasca a skos:Concept ;
+    skos:inScheme :EtnoTermos ;
+    skos:broader :plantas-rituais ;
+    skos:scopeNote "Alguns nomes sao sagrados. Ver etno:accessLevel por rotulo."@pt .
+
+# Public generic label
+:label/ayahuasca-es a skosxl:Label ;
+    skosxl:literalForm "Ayahuasca"@es ;
+    etno:accessLevel "public" .
+:ayahuasca skosxl:prefLabel :label/ayahuasca-es .
+
+# SACRED label — Huni Kui name (ISO 639-3: hux)
+:label/nixi-pae a skosxl:Label ;
+    skosxl:literalForm "Nixi Pae"@hux ;
+    dct:language "hux" ;
+    etno:sourcePeople "Huni Kui (Kaxinawa)" ;
+    etno:sourceRegion "Alto Jurua, Acre" ;
+    etno:accessLevel "sacred" ;
+    etno:consentType "fpic" ;
+    etno:validatedBy "ASKARJ" ;
+    prov:wasAttributedTo :povo/huni-kui ;
+    etno:nagoyaStatus "restricted" ;
+    etno:languageStatus "vulnerable" .
+:ayahuasca skosxl:altLabel :label/nixi-pae .
+
+# ── Indigenous people as PROV Agent ────────────────────────────
+:povo/guarani-mbya a prov:Agent ;
+    skos:prefLabel "Guarani Mbya"@pt .
+
+:povo/huni-kui a prov:Agent ;
+    skos:prefLabel "Huni Kui (Kaxinawa)"@pt .
+```
+
+### etno: Property Reference
+
+| Property | CARE | Description |
+|---|---|---|
+| `etno:sourcePeople` | Collective | Indigenous people attribution (use endonym) |
+| `etno:sourceRegion` | Collective | Geographic territory or biome |
+| `etno:accessLevel` | Authority | `public` / `restricted` / `community-only` / `sacred` |
+| `etno:validatedBy` | Responsibility | Community organization that validated |
+| `etno:pronunciationAudio` | Collective | URI to audio recording |
+| `etno:dialectVariant` | Collective | Dialectal variation note |
+| `etno:languageStatus` | Ethics | UNESCO vitality: safe/vulnerable/endangered/extinct |
+| `etno:consentType` | Authority | `none-required` / `fpic` / `restricted` |
+| `etno:nagoyaStatus` | Responsibility | `compliant` / `pending` / `restricted` / `not-applicable` |
+| `etno:tkLabel` | Authority/Ethics | Local Contexts TK Label applied |
+
+Standard properties also used on labels:
+- `prov:wasAttributedTo` — links label to PROV Agent (people/community)
+- `dct:source` — bibliographic or consultation reference
+- `dct:rightsHolder` — community/org holding rights (on ConceptScheme)
+- `dct:license` — TK Label or license (on ConceptScheme)
+- `dct:language` — ISO 639-3 code
+- `dwc:vernacularName` — Darwin Core bridge on the Concept
+
+### ISO 639-3 Codes for Brazilian Indigenous Languages (examples)
+
+| Code | Language | People |
+|---|---|---|
+| `hux` | Huni Kuĩ | Kaxinawá |
+| `gnm` | Guarani Mbya | Guarani Mbya |
+| `tup` | Tupí | Tupí |
+| `xav` | Xavánte | Xavánte |
+| `kyr` | Kuruáya | Kuruáya |
+| `jab` | Jabuti | Jabuti |
+| `ore` | Orejón | Orejón/Maijuna |
+| `yon` | Yawanapi | Yawanapi |
+
+Full list: https://iso639-3.sil.org/
+
+### Key References
+
+- CARE Principles: https://www.gida-global.org/care
+- Nagoya Protocol: https://www.cbd.int/abs/
+- Local Contexts TK Labels: https://localcontexts.org/labels/traditional-knowledge-labels/
+- PROV-O: https://www.w3.org/TR/prov-o/
+- EtnoTermos / JBRJ: https://etnotermos.jbrj.gov.br/
+- VocBench 3 (best SKOS-XL editor): https://vocbench.uniroma2.it/
+
+---
+
 ## Common Biodiversity SKOS Vocabularies
 
 | Vocabulary | URI | Description |

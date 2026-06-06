@@ -10,6 +10,9 @@ Usage:
     python scripts/explain.py --xl                   # SKOS-XL overview
     python scripts/explain.py --xl --term Label      # Explain a SKOS-XL term
     python scripts/explain.py --xl --list            # List all SKOS-XL terms
+    python scripts/explain.py --cta                  # Traditional Knowledge (CARE) overview
+    python scripts/explain.py --cta --term accessLevel  # Explain a CTA property
+    python scripts/explain.py --cta --list           # List all CTA properties
 """
 
 import argparse
@@ -22,8 +25,9 @@ if hasattr(sys.stdout, "buffer"):
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 REF_DIR = Path(__file__).resolve().parent.parent / "references"
-SKOS_CSV = REF_DIR / "skos_terms.csv"
+SKOS_CSV   = REF_DIR / "skos_terms.csv"
 SKOSXL_CSV = REF_DIR / "skos_xl_terms.csv"
+CTA_CSV    = REF_DIR / "traditional_knowledge_properties.csv"
 
 
 def load_terms(csv_path):
@@ -198,19 +202,132 @@ def list_terms(terms, vocab="SKOS"):
     print()
 
 
+def show_cta_overview(terms):
+    print("=" * 70)
+    print("  CTA - Conhecimento Tradicional Associado a Biodiversidade")
+    print("  Traditional Knowledge (SKOS-XL + CARE + Nagoya Protocol)")
+    print("=" * 70)
+    print()
+    print("Para vocabularios de Conhecimento Tradicional Associado (CTA),")
+    print("SKOS-XL e a escolha correta: permite anotar cada rotulo indigena")
+    print("com povo de origem, nivel de acesso, validacao comunitaria e")
+    print("proveniencia — impossivel com skos:prefLabel literal.")
+    print()
+    print("[CARE Principles] https://www.gida-global.org/care")
+    print("   C - Coletividade (Collective)   -- atribuicao ao povo detentor")
+    print("   A - Autoridade (Authority)       -- controle comunitario sobre os dados")
+    print("   R - Responsabilidade (Responsibility) -- proveniencia rastreavel")
+    print("   E - Etica (Ethics)               -- nao causar dano; respeitar restricoes")
+    print()
+    print("[Protocolo de Nagoya] https://www.cbd.int/abs/")
+    print("   Exige Consentimento Previo Informado (FPIC) para acesso a CTA.")
+    print("   etno:nagoyaStatus e etno:consentType codificam conformidade.")
+    print()
+    print("[Niveis de Acesso] (etno:accessLevel)")
+    print("   public         -- disponivel a qualquer usuario")
+    print("   restricted     -- somente pesquisadores com FPIC")
+    print("   community-only -- somente membros da comunidade")
+    print("   sacred         -- sagrado; nunca publicar sem autorizacao explicita")
+    print()
+    print("[TK Labels] https://localcontexts.org/labels/traditional-knowledge-labels/")
+    print("   Licencas controladas por comunidades indigenas para CTA.")
+    print("   Use dct:license para associar ao ConceptScheme.")
+    print()
+    print("[ISO 639-3 para linguas indigenas] https://iso639-3.sil.org/")
+    print("   Exemplos: hux = Huni Kui (Kaxinawa)  |  gnm = Guarani Mbya")
+    print("             tup = Tupi                  |  yor = Yoruba")
+    print()
+    print("[Propriedades recomendadas em skosxl:Label]")
+    print("   etno:sourcePeople     -- povo de origem do rotulo")
+    print("   etno:sourceRegion     -- territorio/regiao geografica")
+    print("   etno:accessLevel      -- public / restricted / community-only / sacred")
+    print("   etno:validatedBy      -- organizacao representativa que validou")
+    print("   etno:pronunciationAudio -- URI para audio com pronuncia")
+    print("   prov:wasAttributedTo  -- entidade PROV (CARE Coletividade)")
+    print("   dct:source            -- referencia bibliografica ou consulta")
+    print("   etno:nagoyaStatus     -- conformidade com Protocolo de Nagoya")
+    print("   etno:consentType      -- none-required / fpic / restricted")
+    print("   etno:languageStatus   -- vitalidade da lingua (UNESCO)")
+    print()
+    print("[Namespace etno:]")
+    print("   @prefix etno: <http://example.org/etno/> .")
+    print("   (substitua pelo URI definitivo do seu projeto)")
+    print()
+    print("[Ferramentas que suportam SKOS-XL bem]")
+    print("   VocBench 3  -- open-source, usado por FAO/Agrovoc")
+    print("   PoolParty   -- enterprise")
+    print("   Skosmos     -- publicacao/consulta de vocabularios")
+    print()
+    props = sum(1 for t in terms if t)
+    print("[Stats] %d propriedades/classes CTA documentadas" % props)
+    print()
+    print("Use --term <nome> para detalhes. Use --list para listar.")
+    print("Gere um vocabulario CTA: python scripts/generate.py meu_vocab --template etno-tk")
+    print("Valide com CARE checks: python scripts/validate.py vocab.ttl --cta")
+
+
+def show_cta_term(terms, term_name):
+    norm = term_name.lower().replace("etno:", "").replace("prov:", "").replace("dct:", "")
+    found = [t for t in terms if t.get("property", "").lower() == norm]
+    if not found:
+        print("[ERROR] Propriedade '%s' nao encontrada." % term_name)
+        print("   Use --list para ver todas as propriedades CTA.")
+        return
+    for t in found:
+        ns = t.get("namespace", "etno")
+        print("[%s:%s]" % (ns, t["property"]))
+        print("   URI: %s" % t.get("uri", ""))
+        print("   Principio CARE: %s" % t.get("care_principle", ""))
+        print("   Definicao: %s" % t.get("definition", ""))
+        if t.get("notes"):
+            print("   Notas: %s" % t["notes"])
+        print()
+
+
+def list_cta_terms(terms):
+    print("[Lista] Propriedades CTA para vocabularios de Conhecimento Tradicional")
+    print()
+    etno_props = [t for t in terms if t.get("namespace") == "etno"]
+    other_props = [t for t in terms if t.get("namespace") != "etno"]
+    if etno_props:
+        print("  Propriedades etno: (namespace: http://example.org/etno/)")
+        for t in etno_props:
+            care = t.get("care_principle", "")
+            print("    %-30s [%s]" % (t["property"], care))
+        print()
+    if other_props:
+        print("  Propriedades de vocabularios padrao (PROV-O, Dublin Core, DwC):")
+        for t in other_props:
+            print("    %s:%-24s %s" % (
+                t.get("namespace", "?"), t["property"],
+                t.get("definition", "")[:45]))
+        print()
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Explains SKOS and SKOS-XL terms"
+        description="Explains SKOS, SKOS-XL, and Traditional Knowledge (CTA) terms"
     )
     parser.add_argument("--term", "-t",
-                        help="Term name to explain (e.g. broader, prefLabel, Label)")
+                        help="Term name to explain (e.g. broader, prefLabel, Label, accessLevel)")
     parser.add_argument("--list", "-l",
                         action="store_true", help="List all terms")
     parser.add_argument("--xl",
                         action="store_true", help="Target SKOS-XL namespace")
+    parser.add_argument("--cta",
+                        action="store_true",
+                        help="Traditional Knowledge / Conhecimento Tradicional properties")
     args = parser.parse_args()
 
-    if args.xl:
+    if args.cta:
+        terms = load_terms(CTA_CSV)
+        if args.term:
+            show_cta_term(terms, args.term)
+        elif args.list:
+            list_cta_terms(terms)
+        else:
+            show_cta_overview(terms)
+    elif args.xl:
         terms = load_terms(SKOSXL_CSV)
         vocab = "SKOS-XL"
         if args.term:

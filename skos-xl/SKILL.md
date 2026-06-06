@@ -4,10 +4,15 @@ description: >
   Helps users build, validate, convert, and explore controlled vocabularies
   using SKOS (Simple Knowledge Organization System) and SKOS-XL (the W3C
   extension for annotatable labels). Supports Darwin Core integration for
-  biodiversity vocabularies (basisOfRecord, habitat types, taxonomic names).
+  biodiversity vocabularies (basisOfRecord, habitat types, taxonomic names)
+  and Traditional Knowledge (CTA/EtnoTermos) vocabularies with CARE principles,
+  Nagoya Protocol compliance, per-label access control, and indigenous language
+  attribution (PROV-O).
   Use when the user mentions "SKOS", "SKOS-XL", "thesaurus", "controlled
   vocabulary", "concept scheme", "RDF vocabulary", "taxonomic names vocabulary",
-  "Darwin Core vocabulary", "skos:Concept", "prefLabel", or "broadMatch".
+  "Darwin Core vocabulary", "conhecimento tradicional", "etnotermos",
+  "CTA", "CARE principles", "Nagoya Protocol", "indigenous knowledge",
+  "skos:Concept", "prefLabel", or "broadMatch".
 license: MIT
 compatibility: Python 3.9+
 metadata:
@@ -50,7 +55,7 @@ python scripts/sync.py
 
 ## Usage
 
-### 1. Explain SKOS and SKOS-XL
+### 1. Explain SKOS, SKOS-XL, and CTA properties
 
 General SKOS overview:
 
@@ -86,13 +91,23 @@ python scripts/explain.py --xl --term literalForm
 python scripts/explain.py --xl --list
 ```
 
+Traditional Knowledge (CTA) properties overview:
+
+```bash
+python scripts/explain.py --cta
+python scripts/explain.py --cta --list
+python scripts/explain.py --cta --term accessLevel
+python scripts/explain.py --cta --term sourcePeople
+python scripts/explain.py --cta --term nagoyaStatus
+```
+
 ---
 
 ### 2. Validate a SKOS vocabulary file
 
 Validates Turtle, RDF/XML, JSON-LD, N-Triples, or N3 files.
 
-Checks run:
+**Standard checks** (always run):
 1. File parses as valid RDF
 2. Contains at least one `skos:ConceptScheme`
 3. All `skos:Concept` instances linked via `skos:inScheme`
@@ -102,11 +117,19 @@ Checks run:
 7. `skos:related` not used between broader/narrower concepts (S27)
 8. SKOS-XL: each `skosxl:Label` has exactly one `skosxl:literalForm`
 
+**CTA checks** (`--cta` flag, Traditional Knowledge / CARE / Nagoya):
+9. `ConceptScheme` has `dct:rightsHolder` (CARE Authority)
+10. `ConceptScheme` has `dct:license` (TK Label recommended)
+11. Each `skosxl:Label` has `etno:accessLevel`
+12. Labels in non-standard languages have `prov:wasAttributedTo` or `etno:sourcePeople`
+13. Labels with `accessLevel = restricted/sacred` have `etno:validatedBy` or `prov:wasAttributedTo`
+
 ```bash
 python scripts/validate.py vocab.ttl
 python scripts/validate.py vocab.ttl --verbose
+python scripts/validate.py vocab.ttl --cta
+python scripts/validate.py vocab.ttl --cta --verbose
 python scripts/validate.py vocab.rdf --format xml
-python scripts/validate.py vocab.jsonld --format json-ld
 ```
 
 Exit code `0` on success, `1` if errors are found (suitable for CI pipelines).
@@ -115,13 +138,14 @@ Exit code `0` on success, `1` if errors are found (suitable for CI pipelines).
 
 ### 3. Generate a SKOS vocabulary template
 
-Three templates are available:
+Four templates are available:
 
 | Template | Use case |
 |---|---|
 | `basic` (default) | Generic concept hierarchy with optional SKOS-XL labels |
 | `dwc-vocab` | Darwin Core controlled vocabulary (basisOfRecord, occurrenceStatus, etc.) |
 | `dwc-names` | Taxonomic name vocabulary using the TDWG TAG NameThing pattern (SKOS-XL) |
+| `etno-tk` | Traditional Knowledge vocabulary with CARE/PROV-O metadata (SKOS-XL) |
 
 **Basic vocabulary** (plain SKOS):
 
@@ -145,6 +169,13 @@ python scripts/generate.py basisOfRecord --template dwc-vocab
 
 ```bash
 python scripts/generate.py my_names --template dwc-names
+```
+
+**Traditional Knowledge vocabulary** (CTA / EtnoTermos pattern, CARE + Nagoya, SKOS-XL):
+
+```bash
+python scripts/generate.py etnotermos --template etno-tk
+python scripts/generate.py etnotermos --template etno-tk --lang pt --dir ./output
 ```
 
 **Change output format and language**:
@@ -195,6 +226,81 @@ Downloads W3C SKOS/SKOS-XL schemas and TDWG TAG Turtle examples:
 ```bash
 python scripts/sync.py
 ```
+
+---
+
+## Traditional Knowledge (CTA) Vocabularies
+
+### Overview
+
+Traditional Knowledge Associated with Biodiversity (CTA — Conhecimento Tradicional
+Associado à Biodiversidade) requires a vocabulary architecture that is:
+
+- **Polyglot** — multiple indigenous languages, each with individual metadata
+- **Governed** — per-label access control (`public` / `restricted` / `community-only` / `sacred`)
+- **Attributed** — provenance traceable to the originating people (CARE principles)
+- **Compliant** — aligned with the Nagoya Protocol on Access and Benefit-Sharing
+
+SKOS-XL is the correct choice because access restrictions live at the *label* level,
+not at the concept level. The scientific name of a plant may be public while the sacred
+ritual name is restricted — granularity impossible with `skos:prefLabel` literals.
+
+### CARE Principles
+
+| Principle | Property | Description |
+|---|---|---|
+| Collective | `prov:wasAttributedTo`, `etno:sourcePeople` | Attribute knowledge to originating people |
+| Authority | `dct:rightsHolder`, `etno:accessLevel`, `etno:validatedBy` | Community controls its own data |
+| Responsibility | `dct:source`, `etno:nagoyaStatus`, `prov:hadPrimarySource` | Traceable provenance |
+| Ethics | `etno:languageStatus`, `etno:consentType`, `dct:license` | Do no harm; respect restrictions |
+
+### Access levels (`etno:accessLevel`)
+
+| Value | Meaning |
+|---|---|
+| `public` | Available to anyone |
+| `restricted` | Researchers only, requires FPIC under Nagoya |
+| `community-only` | Members of the originating community only |
+| `sacred` | Sacred knowledge; never publish without explicit consent |
+
+### Generate the template
+
+```bash
+python scripts/generate.py etnotermos --template etno-tk --lang pt
+```
+
+This creates a Turtle file with:
+- `skos:ConceptScheme` with `dct:rightsHolder` and `dct:license` (TK Label)
+- Ethnotaxonomic top-level categories (not western-science categories)
+- **Jatobá** (*Hymenaea courbaril*) concept with labels in Portuguese, Guarani Mbya (`@gnm`), and Latin — each with full CARE metadata
+- **Ayahuasca** concept with a `sacred` label in Huni Kuĩ (`@hux`) alongside a public Spanish label — demonstrating per-label access control
+- `prov:Agent` resources for each indigenous people
+- Darwin Core `dwc:vernacularName` bridge on each Concept
+
+### Validate CTA compliance
+
+```bash
+python scripts/validate.py etnotermos.ttl --cta --verbose
+```
+
+### Explain CTA properties
+
+```bash
+python scripts/explain.py --cta
+python scripts/explain.py --cta --term accessLevel
+python scripts/explain.py --cta --term sourcePeople
+python scripts/explain.py --cta --term nagoyaStatus
+python scripts/explain.py --cta --list
+```
+
+### Key references
+
+- [CARE Principles for Indigenous Data Governance](https://www.gida-global.org/care)
+- [Nagoya Protocol — CBD](https://www.cbd.int/abs/)
+- [Local Contexts TK Labels](https://localcontexts.org/labels/traditional-knowledge-labels/)
+- [ISO 639-3 (indigenous language codes)](https://iso639-3.sil.org/)
+- [VocBench 3 — SKOS-XL editor used by FAO/Agrovoc](https://vocbench.uniroma2.it/)
+- [EtnoTermos — JBRJ](https://etnotermos.jbrj.gov.br/)
 
 ---
 
@@ -259,6 +365,7 @@ python scripts/generate.py bryophytes --template dwc-names
 - [SKOS Core schema](references/skos_core.rdf) — official W3C RDF/OWL (after `sync.py`)
 - [SKOS-XL schema](references/skos_xl.rdf) — official W3C RDF/OWL (after `sync.py`)
 - [TDWG TAG NameThing](references/tdwg_skosxl_name.ttl) — Turtle example (after `sync.py`)
+- [Traditional Knowledge properties](references/traditional_knowledge_properties.csv) — CTA/CARE metadata properties
 
 ---
 

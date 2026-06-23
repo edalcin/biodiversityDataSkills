@@ -1,5 +1,7 @@
 # Relações Parasito-Hospedeiro entre Espécies no Padrão Darwin Core
 
+> **Atualização 2026-05-26:** O TDWG ratificou o [Darwin Core Data Package (DwC-DP)](https://dwc.tdwg.org/dp/) e o [Modelo Conceitual (DwC-CM)](https://dwc.tdwg.org/cm/). O DwC-DP elimina a limitação de star schema do DwC-A e suporta grafos FK arbitrários — ideal para relações N:N complexas como parasito-hospedeiro. A Abordagem 4 abaixo documenta esta opção moderna.
+
 ## Contexto
 
 Este guia aborda a modelagem de relações **parasito-hospedeiro entre espécies** (conceitos taxonômicos) no padrão [Darwin Core](https://dwc.tdwg.org/) (DwC), utilizando o **Taxon Core** como base.
@@ -148,33 +150,79 @@ Usando o campo `dynamicProperties` (JSON) diretamente no Taxon Core:
 
 > ⚠️ **Problema:** `dynamicProperties` é um campo JSON opaco, **não pesquisável**, **não validável** por ferramentas padrão (GBIF, IPT). Use apenas para protótipos ou dados internos.
 
----
-
 ## Comparação das Abordagens
 
 | Abordagem | Estrutura | Consultável por máquina | Publicável no GBIF | Complexidade |
 |---|---|---|---|---|
-| 🟢 **Taxon Core + ResourceRelationship** | Relacional com IDs | ✅ Sim | ✅ Sim | Média |
+| 🟢 **Taxon Core + ResourceRelationship (DwC-A)** | Relacional com IDs | ✅ Sim | ✅ Sim | Média |
+| 🟢 **DwC-DP** (novo) | FK graph explícito | ✅ Sim | ⏳ Em adoção | Média-alta |
 | 🟡 Taxon Core + SpeciesProfile | Texto livre | ⚠️ Parcial | ✅ Sim | Baixa |
 | 🔴 Taxon Core + dynamicProperties | JSON opaco | ❌ Não | ✅ Aceito, mas desencorajado | Mínima |
 
 ---
 
-## Recomendação Final
-
-> ✅ **Use Taxon Core + ResourceRelationship Extension** para modelar relações parasito-hospedeiro entre espécies. Esta abordagem:
+> ✅ **Use Taxon Core + ResourceRelationship Extension** para publicar hoje no GBIF via IPT. Esta abordagem:
 >
 > - É **totalmente alinhada ao padrão TDWG/Darwin Core**
 > - Permite **consultas programáticas** (ex.: *"quais hospedeiros de Toxoplasma gondii?"*)
 > - É **compatível com publicação no GBIF** via IPT
 > - Suporta **metadados associados** (fonte bibliográfica, data, observações)
 > - Permite **relações N:N** (um parasita com múltiplos hospedeiros e vice-versa)
+>
+> 🔮 **Para novos projetos a partir de 2026:** considere **DwC-DP** (Abordagem 4). Expressa as mesmas relações com semântica explícita (`predicate: "parasiteOf"`) e FK graph, sem as limitações do star schema. Aguarda adoção completa do GBIF.
+
+---
+
+## Abordagem 4: DwC-DP (Darwin Core Data Package — moderno, ratificado 2026)
+
+O [DwC-DP](https://dwc.tdwg.org/dp/) implementa o [DwC-CM](https://dwc.tdwg.org/cm/) com grafos de FK arbitrários. Relações parasito-hospedeiro são expressas como FK entre tabelas `taxon` e `taxon` com `predicate` semântico explícito.
+
+**Estrutura mínima:**
+```
+datapackage.json
+eml.xml
+taxon.csv
+taxon_relationship.csv
+```
+
+**taxon_relationship.csv** (equivalente ao ResourceRelationship):
+```
+taxonRelationshipID,taxonID,relatedTaxonID,relationshipType,accordingTo
+RR-001,TX-P-001,TX-H-001,parasiteOf,Dubey 2010
+RR-002,TX-P-001,TX-H-002,parasiteOf,Dubey 2010
+```
+
+**foreignKey em `datapackage.json`** (fragmento):
+```json
+{
+  "fields": "taxonID",
+  "predicate": "parasiteOf",
+  "reference": { "resource": "taxon", "fields": "taxonID" }
+}
+```
+
+**Vantagens sobre DwC-A:**
+- Semântica da relação embutida no `predicate` (não depende de campo `relationshipOfResource` em texto livre)
+- FK graph explícito e validável com ferramentas Frictionless Data
+- Sem limitação de star schema: taxon pode ser tanto sujeito quanto objeto de múltiplas relações simultâneas
+
+**Limitações:**
+- GBIF ainda em processo de adoção (publicação via IPT não disponível ainda)
+- Ferramentas de validação DwC-DP em desenvolvimento
+
+**Referências:**
+- [Darwin Core Data Package Guide](https://dwc.tdwg.org/dp/)
+- [Darwin Core Conceptual Model](https://dwc.tdwg.org/cm/)
+- [DwC-DP Designer](https://gbif.github.io/dwc-dp/designer/)
+- [Table schemas DwC-DP](http://rs.tdwg.org/dwc-dp/1.0/table-schemas)
 
 ---
 
 ## Referências
 
 - [Darwin Core (TDWG)](https://dwc.tdwg.org/)
+- [Darwin Core Conceptual Model (DwC-CM)](https://dwc.tdwg.org/cm/) — ratificado 2026-05-26
+- [Darwin Core Data Package Guide (DwC-DP)](https://dwc.tdwg.org/dp/) — ratificado 2026-05-26
 - [ResourceRelationship Extension (GBIF)](https://rs.gbif.org/extension/dwc/resource_relationship_2025-07-10.xml)
 - [Taxon Core (GBIF)](https://rs.gbif.org/core/dwc/taxon_2025-07-10.xml)
 - [SpeciesProfile Extension (GBIF)](https://rs.gbif.org/extension/gbif/1.0/species_profile_2022-02-02.xml)

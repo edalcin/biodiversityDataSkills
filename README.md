@@ -7,7 +7,7 @@ A collection of AI skills for biodiversity data, designed for the [skills.sh](ht
 
 | Skill | Description | Key dependency |
 |---|---|---|
-| [darwin-core](./darwin-core/) | Work with Darwin Core and Darwin Core Archive (DwC-A) | `pandas`, `python-dwca-reader` |
+| [darwin-core](./darwin-core/) | Work with Darwin Core (DwC), Darwin Core Archive (DwC-A), **Darwin Core Conceptual Model (DwC-CM)**, and **Darwin Core Data Package (DwC-DP)** | `pandas`, `python-dwca-reader` |
 | [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies — generic, Darwin Core, and Traditional Knowledge (CTA/CARE/Nagoya) | `rdflib` |
 
 ## Skills Interoperability
@@ -20,10 +20,11 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 | Define a controlled vocabulary for `basisOfRecord` as RDF | skos-xl (`dwc-vocab` template) |
 | Represent taxonomic names with nomenclatural provenance | skos-xl (`dwc-names` template) |
 | Build a Traditional Knowledge vocabulary (CTA/EtnoTermos) | skos-xl (`etno-tk` template) |
-| Per-label access control for indigenous knowledge (sacred/restricted) | skos-xl (`etno-tk` + `--cta` validation) |
 | Map a legacy CSV to Darwin Core terms | darwin-core (`map_columns.py`) |
 | Validate a DwC-A archive | darwin-core (`validate.py`) |
 | Align an institutional vocabulary to GBIF/TDWG terms | skos-xl (`skos:exactMatch`) |
+| Understand DwC class relationships (Event, Occurrence, Survey…) | darwin-core (DwC-CM reference) |
+| Create a relational DwC-DP data package (replaces DwC-A star schema) | darwin-core (DwC-DP guide) |
 
 ---
 
@@ -208,15 +209,13 @@ Runs 5 CTA checks on top of the 8 standard SKOS checks:
 
 ## darwin-core
 
-This skill helps researchers, data managers, and biodiversity informaticians work with [Darwin Core](https://dwc.tdwg.org/) (DwC) — the international standard for sharing biological occurrence data — and the [Darwin Core Archive](https://rs.gbif.org/core/) (DwC-A) packaging format used by platforms like [GBIF](https://www.gbif.org/) and [iDigBio](https://www.idigbio.org/).
+> **Updated 2026-05-26:** The TDWG Executive Committee ratified two new normative additions to Darwin Core: the **Conceptual Model (DwC-CM)** and the **Data Package Guide (DwC-DP)**. This skill now covers all three formats: DwC-A (existing archives), DwC-CM (class relationship semantics), and DwC-DP (next-generation relational packages).
 
-### What is Darwin Core?
+This skill helps researchers, data managers, and biodiversity informaticians work with [Darwin Core](https://dwc.tdwg.org/) (DwC) — the international standard for sharing biological occurrence data — and its packaging formats:
 
-Darwin Core is a vocabulary standard maintained by [TDWG](https://www.tdwg.org/) (Biodiversity Information Standards). It defines a fixed set of terms (fields) for describing biological observations, specimens, and taxa, making data interoperable across institutions worldwide.
-
-A **Darwin Core Archive** (DwC-A) is a ZIP file containing:
-- `meta.xml` — machine-readable descriptor of the archive structure (which files exist, which terms each column maps to, and how files relate to each other)
-- One or more CSV data files (occurrences, events, taxa, or extension data)
+- **Darwin Core Archive (DwC-A)** — ZIP file with `meta.xml` + CSVs; star-schema; used by GBIF, iDigBio, and IPT today
+- **Darwin Core Data Package (DwC-DP)** — gzip with `datapackage.json` + CSVs; arbitrary FK relationships; ratified 2026-05-26; GBIF adoption in progress
+- **Darwin Core Conceptual Model (DwC-CM)** — semantics of relationships between DwC classes; technology-agnostic reference; ratified 2026-05-26
 
 ### Setup
 
@@ -396,7 +395,9 @@ See [`darwin-core/references/EXTENSIONS.md`](darwin-core/references/EXTENSIONS.m
 | `references/all_dwc_vertical.csv` | Flat list of 216 current DwC terms |
 | `references/term_versions.csv` | 457 term versions with full definitions, comments, and examples |
 | `references/EXTENSIONS.md` | All GBIF-registered DwC-A extensions |
-| `references/TEXT_GUIDE.md` | Official Darwin Core Text Guide specification |
+| `references/TEXT_GUIDE.md` | Official Darwin Core Text Guide (DwC-A `meta.xml` spec) |
+| `references/CONCEPTUAL_MODEL.md` | **DwC-CM** — classes, relationships, eDNA/molecular, Agent, Media (ratified 2026-05-26) |
+| `references/DATA_PACKAGE_GUIDE.md` | **DwC-DP** — descriptor, table schemas, FK graph, field descriptors (ratified 2026-05-26) |
 
 ---
 

@@ -9,6 +9,7 @@ A collection of AI skills for biodiversity data, designed for the [skills.sh](ht
 |---|---|---|
 | [darwin-core](./darwin-core/) | Work with Darwin Core (DwC), Darwin Core Archive (DwC-A), **Darwin Core Conceptual Model (DwC-CM)**, and **Darwin Core Data Package (DwC-DP)** | `pandas`, `python-dwca-reader` |
 | [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies — generic, Darwin Core, and Traditional Knowledge (CTA/CARE/Nagoya) | `rdflib` |
+| [biohousekeeper](./biohousekeeper/) | Analyze a biodiversity spreadsheet (CSV/XLSX) and propose a Darwin Core-aligned column structure, asking the user about ambiguous splits/merges before restructuring | `pandas`, `openpyxl` |
 
 ## Skills Interoperability
 
@@ -25,6 +26,7 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 | Align an institutional vocabulary to GBIF/TDWG terms | skos-xl (`skos:exactMatch`) |
 | Understand DwC class relationships (Event, Occurrence, Survey…) | darwin-core (DwC-CM reference) |
 | Create a relational DwC-DP data package (replaces DwC-A star schema) | darwin-core (DwC-DP guide) |
+| Restructure a legacy spreadsheet's columns to match Darwin Core, with composite-field splitting | biohousekeeper (`analyze.py` + `apply.py`) |
 
 ---
 
@@ -398,6 +400,66 @@ See [`darwin-core/references/EXTENSIONS.md`](darwin-core/references/EXTENSIONS.m
 | `references/TEXT_GUIDE.md` | Official Darwin Core Text Guide (DwC-A `meta.xml` spec) |
 | `references/CONCEPTUAL_MODEL.md` | **DwC-CM** — classes, relationships, eDNA/molecular, Agent, Media (ratified 2026-05-26) |
 | `references/DATA_PACKAGE_GUIDE.md` | **DwC-DP** — descriptor, table schemas, FK graph, field descriptors (ratified 2026-05-26) |
+
+---
+
+## biohousekeeper
+
+This skill helps researchers and data managers turn a legacy biodiversity spreadsheet (field notebook exports, museum collection databases, survey data) into a Darwin Core-aligned structure. Unlike `darwin-core`'s `map_columns.py` — which only renames CSV headers — `biohousekeeper` also reads sample cell values to detect **composite columns that need splitting** (packed coordinates, binomial scientific names, delimited locality hierarchies), **redundant duplicate columns**, and **missing recommended fields**, asking the user about anything ambiguous before proposing a final structure.
+
+### Setup
+
+Requires Python 3.9+:
+
+```bash
+pip install -r biohousekeeper/requirements.txt
+```
+
+### Scripts
+
+```
+analyze.py → (resolve open questions) → apply.py
+```
+
+---
+
+#### 1. `analyze.py` — Analyze a spreadsheet and propose a structure
+
+Reads a `.csv` or `.xlsx` file, inspects column names and sample values, and writes a Markdown report plus a JSON plan — the original file is never modified.
+
+```bash
+python biohousekeeper/scripts/analyze.py my_spreadsheet.xlsx
+python biohousekeeper/scripts/analyze.py my_spreadsheet.xlsx --sheet "Occurrences"
+python biohousekeeper/scripts/analyze.py data.csv --out-dir ./report
+```
+
+What it detects:
+
+| Finding | Example | Confidence |
+|---|---|---|
+| Column name/synonym maps to a DwC term (EN/PT/ES) | `coletor` → `recordedBy` | high — auto-applies |
+| Packed coordinate pair | `"-23.55,-46.63"` → `decimalLatitude` + `decimalLongitude` | high — auto-applies |
+| Binomial scientific name | `"Panthera onca"` → `genus` + `specificEpithet` (derived; `scientificName` kept) | medium — asks first |
+| Delimited locality hierarchy | `"Brazil/SP/Campinas"` → `country`/`stateProvince`/`municipality` | low — asks which term per part |
+| Separate year/month/day columns | merged into ISO 8601 `eventDate` | high — auto-applies |
+| Duplicate columns (≥95% matching values) | `coletor` and `observador` holding the same names | medium — asks which to drop |
+| Missing recommended field | no column maps to `occurrenceID`, `basisOfRecord`, etc. | advisory note |
+
+---
+
+#### 2. `apply.py` — Write the corrected spreadsheet
+
+After reviewing the report and resolving its open questions (by editing the plan JSON's `apply`/`targets` fields), generate the corrected file:
+
+```bash
+python biohousekeeper/scripts/apply.py my_spreadsheet.xlsx --plan my_spreadsheet_biohousekeeper_report.json --output my_spreadsheet_corrected.xlsx
+```
+
+`--output` must be a different path from the input — the original spreadsheet is always preserved.
+
+### Scope
+
+`biohousekeeper` handles column-level renaming and single-column split/merge/drop operations on one sheet. It does not perform full DwC-DP multi-table normalization (splitting a flat sheet into separate event/occurrence/taxon tables) — use `darwin-core`'s DwC-DP guide for that once the column-level cleanup is done.
 
 ---
 

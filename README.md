@@ -3,6 +3,24 @@
 
 A collection of AI skills for biodiversity data, designed for the [skills.sh](https://www.skills.sh/) ecosystem. Each skill provides scripts, reference data, and documentation to help researchers, data managers, and biodiversity informaticians work with standards-compliant data.
 
+## Installation
+
+Each skill installs independently via the [skills.sh](https://www.skills.sh/) CLI — no need to clone this repo:
+
+```bash
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill darwin-core
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill skos-xl
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill biohousekeeper
+```
+
+Or install every skill in the repo at once:
+
+```bash
+npx skills add https://github.com/edalcin/biodiversityDataSkills
+```
+
+Each skill has its own Python dependencies — see that skill's **Setup** section below for the `pip install` command to run after installing.
+
 ## Skills
 
 | Skill | Description | Key dependency |

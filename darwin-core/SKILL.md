@@ -13,7 +13,7 @@ license: MIT
 compatibility: Python 3.9+
 metadata:
   author: biodiversityDataSkills
-  repository: https://github.com/<your-username>/biodiversityDataSkills
+  repository: https://github.com/edalcin/biodiversityDataSkills
 ---
 
 # Darwin Core Skill

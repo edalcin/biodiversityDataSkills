@@ -11,6 +11,7 @@ Each skill installs independently via the [skills.sh](https://www.skills.sh/) CL
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill darwin-core
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill skos-xl
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill biohousekeeper
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill grist-master
 ```
 
 Or install every skill in the repo at once:
@@ -28,6 +29,7 @@ Each skill has its own Python dependencies — see that skill's **Setup** sectio
 | [darwin-core](./darwin-core/) | Work with Darwin Core (DwC), Darwin Core Archive (DwC-A), **Darwin Core Conceptual Model (DwC-CM)**, and **Darwin Core Data Package (DwC-DP)** | `pandas`, `python-dwca-reader` |
 | [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies — generic, Darwin Core, and Traditional Knowledge (CTA/CARE/Nagoya) | `rdflib` |
 | [biohousekeeper](./biohousekeeper/) | Analyze a biodiversity spreadsheet (CSV/XLSX) and propose a Darwin Core-aligned column structure, asking the user about ambiguous splits/merges before restructuring | `pandas`, `openpyxl` |
+| [grist-master](./grist-master/) | Reference knowledge for [Grist](https://www.getgrist.com/) — REST/SQL API, MCP server, Python formulas, access rules, self-hosting | none (pure reference) |
 
 ## Skills Interoperability
 

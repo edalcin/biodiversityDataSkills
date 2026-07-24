@@ -282,3 +282,5 @@ occurrence.csv
 ## Related Skills
 
 **[skos-xl](../skos-xl/)** — Use alongside this skill to define the controlled vocabularies for Darwin Core term values (e.g. `basisOfRecord`, `occurrenceStatus`, `habitat`) as SKOS RDF. Also supports the TDWG TAG NameThing pattern for representing taxonomic names with full nomenclatural provenance.
+
+**[DataProvenance](../DataProvenance/)** — Use alongside this skill to record the lineage of a DwC-A/DwC-DP dataset: which activity (import, georeferencing, QC pass) generated or transformed which records, and which agent (collector, data manager, institution) is responsible, following the W3C PROV model.

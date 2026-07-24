@@ -372,3 +372,5 @@ python scripts/generate.py bryophytes --template dwc-names
 ## Related Skills
 
 **[darwin-core](../darwin-core/)** — Use alongside this skill to package and validate occurrence data. Darwin Core defines the fields; SKOS defines the controlled vocabularies for the values. The `dwc-vocab` template generates SKOS representations of any Darwin Core controlled term.
+
+**[DataProvenance](../DataProvenance/)** — Normative reference for the `prov:` terms (`prov:wasAttributedTo`, `prov:Agent`, qualification, `prov:hadPrimarySource`) already used by this skill's Traditional Knowledge (CTA) template, for provenance trails deeper than the template covers.

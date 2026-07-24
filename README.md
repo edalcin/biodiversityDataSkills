@@ -12,6 +12,7 @@ npx skills add https://github.com/edalcin/biodiversityDataSkills --skill darwin-
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill skos-xl
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill biohousekeeper
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill grist-master
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill DataProvenance
 ```
 
 Or install every skill in the repo at once:
@@ -30,6 +31,7 @@ Each skill has its own Python dependencies — see that skill's **Setup** sectio
 | [skos-xl](./skos-xl/) | Build and validate SKOS / SKOS-XL controlled vocabularies — generic, Darwin Core, and Traditional Knowledge (CTA/CARE/Nagoya) | `rdflib` |
 | [biohousekeeper](./biohousekeeper/) | Analyze a biodiversity spreadsheet (CSV/XLSX) and propose a Darwin Core-aligned column structure, asking the user about ambiguous splits/merges before restructuring | `pandas`, `openpyxl` |
 | [grist-master](./grist-master/) | Reference knowledge for [Grist](https://www.getgrist.com/) — REST/SQL API, MCP server, Python formulas, access rules, self-hosting | none (pure reference) |
+| [DataProvenance](./DataProvenance/) | Reference knowledge for the [W3C PROV](https://www.w3.org/TR/prov-overview/) standard — PROV-DM, PROV-O (RDF), PROV-N (notation), PROV-XML, for documenting dataset lineage | none (pure reference) |
 
 ## Skills Interoperability
 

@@ -1,0 +1,5 @@
+# Local scrape of code.iczn.org, kept as raw material for writing and updating the
+# reference files. Never committed: the Code is copyrighted ("All rights reserved",
+# (c) International Trust for Zoological Nomenclature 1999), so a versioned copy would
+# be redistribution. Rebuild it with scripts/sync.py or fetch_article.py when needed.
+.cache/

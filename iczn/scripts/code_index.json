@@ -1,0 +1,874 @@
+{
+ "source": "https://code.iczn.org/",
+ "edition": "4th edition, 1999",
+ "note": "Article -> canonical URL, owning chapter, and the reference file that synthesises it. sha256 is of the page HTML as retrieved when this index was built; sync.py uses it to detect upstream change.",
+ "articles": [
+  {
+   "article": 1,
+   "title": "Definition and scope",
+   "url": "https://code.iczn.org/zoological-nomenclature/article-1-definition-and-scope/",
+   "chapter": 1,
+   "chapter_title": "Zoological nomenclature",
+   "reference": "01-nomenclature.md",
+   "sha256": "0c8c8eb21e5d3d2bad0bc34f78af0ccf692aa50f9b0d606aa63bef8ffc5c1525"
+  },
+  {
+   "article": 2,
+   "title": "Admissibility of certain names in zoological nomenclature",
+   "url": "https://code.iczn.org/zoological-nomenclature/article-2-admissibility-of-certain-names-in-zoological-nomenclature/",
+   "chapter": 1,
+   "chapter_title": "Zoological nomenclature",
+   "reference": "01-nomenclature.md",
+   "sha256": "5d39cda8234c68c34abdac941a9d3a96a9e3d8f25260485dc84eb8679eb89ddc"
+  },
+  {
+   "article": 3,
+   "title": "Starting point",
+   "url": "https://code.iczn.org/zoological-nomenclature/article-3-starting-point/",
+   "chapter": 1,
+   "chapter_title": "Zoological nomenclature",
+   "reference": "01-nomenclature.md",
+   "sha256": "02756fe2bb3f3b5bb94442c05ac44ce72e2108a44dab0ef63b11a51e097351ba"
+  },
+  {
+   "article": 4,
+   "title": "Names of taxa at ranks above the species group",
+   "url": "https://code.iczn.org/chapter-2-the-number-of-words-in-the-scientific-names-of-animals/article-4-names-of-taxa-at-ranks-above-the-species-group/",
+   "chapter": 2,
+   "chapter_title": "The number of words in the scientific names of animals",
+   "reference": "02-words-in-names.md",
+   "sha256": "47819f3d637909d16979c1b3133621f37c62c52ecd70063cf064807a56c2ba9a"
+  },
+  {
+   "article": 5,
+   "title": "Principle of Binominal Nomenclature",
+   "url": "https://code.iczn.org/chapter-2-the-number-of-words-in-the-scientific-names-of-animals/article-5-principle-of-binominal-nomenclature/",
+   "chapter": 2,
+   "chapter_title": "The number of words in the scientific names of animals",
+   "reference": "02-words-in-names.md",
+   "sha256": "28b7497ea36dc6e110fcfe1db9f76cea72cb1cf3a9884e6797bf621ff8e9c3b0"
+  },
+  {
+   "article": 6,
+   "title": "Interpolated names",
+   "url": "https://code.iczn.org/chapter-2-the-number-of-words-in-the-scientific-names-of-animals/article-6-interpolated-names/",
+   "chapter": 2,
+   "chapter_title": "The number of words in the scientific names of animals",
+   "reference": "02-words-in-names.md",
+   "sha256": "234e1d668e2249a646d3569140c819d779fbfb6e971c1e07ad27d10265d998fb"
+  },
+  {
+   "article": 7,
+   "title": "Application",
+   "url": "https://code.iczn.org/criteria-of-publication/article-7-application/",
+   "chapter": 3,
+   "chapter_title": "Criteria of publication",
+   "reference": "03-publication.md",
+   "sha256": "14e37c0f761e930ee6ac5234f607edbb51f094014bfde05062108eaf59ba37ec"
+  },
+  {
+   "article": 8,
+   "title": "What constitutes published work",
+   "url": "https://code.iczn.org/criteria-of-publication/article-8-what-constitutes-published-work/",
+   "chapter": 3,
+   "chapter_title": "Criteria of publication",
+   "reference": "03-publication.md",
+   "sha256": "b2ce00772c66428f66afc666261ccc442d6d4efbb7b8674e907004561d067d86"
+  },
+  {
+   "article": 9,
+   "title": "What does not constitute published work",
+   "url": "https://code.iczn.org/criteria-of-publication/article-9-what-does-not-constitute-published-work/",
+   "chapter": 3,
+   "chapter_title": "Criteria of publication",
+   "reference": "03-publication.md",
+   "sha256": "3041e54072e34ad499678b3158d8b93969e233f3b8f16d9aeb36c0a62de77ddc"
+  },
+  {
+   "article": 10,
+   "title": "Provisions conferring availability",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-10-provisions-conferring-availability/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "e01a0bf6feadc586a535ca6afeb2746ef5c141b1ef0ee926a7e77afd94017402"
+  },
+  {
+   "article": 11,
+   "title": "Requirements",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-11-requirements/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "124fd4c6f37d7a90ab9cd5037ac4b0ed51ff25db1c33cbbb8ed7bd03f213a8fb"
+  },
+  {
+   "article": 12,
+   "title": "Names published before 1931",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-12-names-published-before-1931/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "892cfb3fb74a862d9c6362c6ac012ec7a8e7b45cb7033865a597abec603cb410"
+  },
+  {
+   "article": 13,
+   "title": "Names published after 1930",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-13-names-published-after-1930/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "ac8e6db174e6e35500798ae05c654a02ef2a09bcef7f9994f3901aec0b63b500"
+  },
+  {
+   "article": 14,
+   "title": "Anonymous authorship of names and nomenclatural acts",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-14-anonymous-authorship-of-names-and-nomenclatural-acts/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "3ff6b315fdf72dda2c01c344aafa03efd7bc59fe0302eeeb2fbf3dbc67caabe8"
+  },
+  {
+   "article": 15,
+   "title": "Names and nomenclatural acts published after 1960",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-15-names-and-nomenclatural-acts-published-after-1960/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "045aea2fa4370e6d2de7c24dc6da68e3ce1bc627ca788da0cb208f408ece8c9d"
+  },
+  {
+   "article": 16,
+   "title": "Names published after 1999",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-16-names-published-after-1999/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "47f529fe0c40d72f93cf332ab389dc156f6285443567d9b7aed3d3bd3236bac1"
+  },
+  {
+   "article": 17,
+   "title": "Names found to denote more than one taxon, or taxa of hybrid origin, or based on parts or stages of animals or on unusual specimens",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-17-names-found-to-denote-more-than-one-taxon-or-taxa-of-hybrid-origin-or-based-on-parts-or-stages-of-animals-or-on-unusual-specimens/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "4dca3026d6cadef01ecaf9990cf2996ccb6f512ddddb34cba444be39ca2a61bd"
+  },
+  {
+   "article": 18,
+   "title": "Inappropriate and tautonymous names",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-18-inappropriate-and-tautonymous-names/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "565656e19cda8ce740a038fed5634d432760c9ffac003509f3627df71412aee5"
+  },
+  {
+   "article": 19,
+   "title": "Status of emendations, incorrect spellings, and mandatory changes",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-19-status-of-emendations-incorrect-spellings-and-mandatory-changes/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "f5d97308307bac4b0dcd0c21b66dfdd636ba8448614761be905bc6b8d1fe8aa2"
+  },
+  {
+   "article": 20,
+   "title": "Genus-group names ending in -its, -ytes, or -ithes given to fossils",
+   "url": "https://code.iczn.org/chapter-4-criteria-of-availability/article-20-genus-group-names-ending-in-its-ytes-or-ithes-given-to-fossils/",
+   "chapter": 4,
+   "chapter_title": "Criteria of availability",
+   "reference": "04-availability.md",
+   "sha256": "c47600c0ce1ab62c1d72c3a6d9daca81a15846a3c76bff0ba7a4cd4fb61ec08e"
+  },
+  {
+   "article": 21,
+   "title": "Determination of date",
+   "url": "https://code.iczn.org/date-of-publication/article-21-determination-of-date/",
+   "chapter": 5,
+   "chapter_title": "Date of publication",
+   "reference": "05-date.md",
+   "sha256": "451304ba05ee80b91abe308fbb8c7387413e7a5313a89a0cb7f9a5da19e70711"
+  },
+  {
+   "article": 22,
+   "title": "Citation of date",
+   "url": "https://code.iczn.org/date-of-publication/article-22-citation-of-date/",
+   "chapter": 5,
+   "chapter_title": "Date of publication",
+   "reference": "05-date.md",
+   "sha256": "43b729009a143fa2828a088e8b1553e04b686e0570c80faee282baa8124a4a76"
+  },
+  {
+   "article": 23,
+   "title": "Principle of Priority",
+   "url": "https://code.iczn.org/validity-of-names-and-nomenclatural-acts/article-23-principle-of-priority/",
+   "chapter": 6,
+   "chapter_title": "Validity of names and nomenclatural acts",
+   "reference": "06-validity-priority.md",
+   "sha256": "f32ee497c2dcc06d3b794db9873bd4766e1cafa904a5782fd238f48cfde05937"
+  },
+  {
+   "article": 24,
+   "title": "Precedence between simultaneously published names, spellings or acts",
+   "url": "https://code.iczn.org/validity-of-names-and-nomenclatural-acts/article-24-precedence-between-simultaneously-published-names-spellings-or-acts/",
+   "chapter": 6,
+   "chapter_title": "Validity of names and nomenclatural acts",
+   "reference": "06-validity-priority.md",
+   "sha256": "0b4ba954c18f8da7312ef75214f2f97280f457f7bfa4b9ab0fc861a8113bf4a7"
+  },
+  {
+   "article": 25,
+   "title": "Formation and treatment of names",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-25-formation-and-treatment-of-names/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "7a8a6ac02c80edd23d367514052dd2c3dc0f2190e7d8ba0a8cd8d3ce41ae04e8"
+  },
+  {
+   "article": 26,
+   "title": "Assumption of Greek or Latin in scientific names",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-26-assumption-of-greek-or-latin-in-scientific-names/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "9b6cc8e19d89c94d5d39cfac0686e03cc972df4961feeff22ed1addacb1c357e"
+  },
+  {
+   "article": 27,
+   "title": "Diacritic and other marks",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-27-diacritic-and-other-marks/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "3a63746c8abbab3294622c351fb2d80bb1cac9fad89bca9924883f87377f1ca4"
+  },
+  {
+   "article": 28,
+   "title": "Initial letters",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-28-initial-letters/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "a17a68c4606fd1e9f272a3ba5ea647b53d58ec8a654a13ed9a58a7098dfa8967"
+  },
+  {
+   "article": 29,
+   "title": "Family-group names",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-29-family-group-names/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "fc71d4ec0b7b7281ace4793e6760b27be2ff5c9eeb731a9850b3d7010a2c6086"
+  },
+  {
+   "article": 30,
+   "title": "Gender of genus-group names",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-30-gender-of-genus-group-names/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "6be75691e5240cb556855cb12b1778a0632010e30967616e9c8edb23adfb25d9"
+  },
+  {
+   "article": 31,
+   "title": "Species-group names",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-31-species-group-names/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "08f84ecb3e2277fa7c855845eae983b6a21fecec3a6b4d450b7d3a7a132f0321"
+  },
+  {
+   "article": 32,
+   "title": "Original spellings",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-32-original-spellings/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "74df247eac3d29c82d5e57cede4d9014703681cdd3f65faffa2a3d0a40064685"
+  },
+  {
+   "article": 33,
+   "title": "Subsequent spellings",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-33-subsequent-spellings/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "74b1c4d43e07d921346eddd23aec3b4707bea0eef1b3b58b858461b236ea14de"
+  },
+  {
+   "article": 34,
+   "title": "Mandatory changes in spelling consequent upon changes in rank or combination",
+   "url": "https://code.iczn.org/formation-and-treatment-of-names/article-34-mandatory-changes-in-spelling-consequent-upon-changes-in-rank-or-combination/",
+   "chapter": 7,
+   "chapter_title": "Formation and treatment of names",
+   "reference": "07-formation-spelling.md",
+   "sha256": "b1954012f675d5a6dc7536c5ef000979894483953b6febc65bc0633785a4149c"
+  },
+  {
+   "article": 35,
+   "title": "The family group",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-35-the-family-group/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "52167c485280989c5f66bd5749d861f07648bfb778fca88b917fb091ba27ecac"
+  },
+  {
+   "article": 36,
+   "title": "Principle of Coordination",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-36-principle-of-coordination/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "b67e403f8c0e8c8d54ee81dd8f1dc1f5d5f11cb887b192c87b36ea9cffef8eb9"
+  },
+  {
+   "article": 37,
+   "title": "Nominotypical taxa",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-37-nominotypical-taxa/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "fc7ef7bfd649f7e887a7b4ee91bc5550033dba5df1bde1f667391dcb32f29a6d"
+  },
+  {
+   "article": 38,
+   "title": "Homonymy between family-group names",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-38-homonymy-between-family-group-names/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "9d41730b52aa008436d6cad8bddd34193308def3d1b56987d4c9da0135c4a34f"
+  },
+  {
+   "article": 39,
+   "title": "Invalidity due to homonymy or suppression of the name of the type genus",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-39-invalidity-due-to-homonymy-or-suppression-of-the-name-of-the-type-genus/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "d603d0d5d66ffb9a0ab9059b018ee86f7c4bbe5267d4bcfcfc29dc18789ee20e"
+  },
+  {
+   "article": 40,
+   "title": "Synonymy of the type genus",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-40-synonymy-of-the-type-genus/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "1f047642b4783be47d03ad554445e7bc1bfda9ca107cf0d12968f34f814adaca"
+  },
+  {
+   "article": 41,
+   "title": "Misidentified type genera and overlooked type fixations",
+   "url": "https://code.iczn.org/family-group-nominal-taxa-and-their-names/article-41-misidentified-type-genera-and-overlooked-type-fixations/",
+   "chapter": 8,
+   "chapter_title": "Family-group nominal taxa and their names",
+   "reference": "08-family-group.md",
+   "sha256": "69d5574e7cd17329ea759c311786330e5aa94d5c4959b52bac50a5c48c9f1409"
+  },
+  {
+   "article": 42,
+   "title": "The genus group",
+   "url": "https://code.iczn.org/genus-group-nominal-taxa-and-their-names/article-42-the-genus-group/",
+   "chapter": 9,
+   "chapter_title": "Genus-group nominal taxa and their names",
+   "reference": "09-genus-group.md",
+   "sha256": "7bbc0d8a43a44a0db0b992b0452fd9daed1deb348ba5fcba15a602b8acc86d8c"
+  },
+  {
+   "article": 43,
+   "title": "Principle of Coordination",
+   "url": "https://code.iczn.org/genus-group-nominal-taxa-and-their-names/article-43-principle-of-coordination/",
+   "chapter": 9,
+   "chapter_title": "Genus-group nominal taxa and their names",
+   "reference": "09-genus-group.md",
+   "sha256": "b823a832d41cec74ac6a6a08bdd93633fcc3556595f5cc7187e70a8b6b09f4fa"
+  },
+  {
+   "article": 44,
+   "title": "Nominotypical taxa",
+   "url": "https://code.iczn.org/genus-group-nominal-taxa-and-their-names/article-44-nominotypical-taxa/",
+   "chapter": 9,
+   "chapter_title": "Genus-group nominal taxa and their names",
+   "reference": "09-genus-group.md",
+   "sha256": "292a172a40985701fd2f9c74fe0c8ffd2968c1645a69ad3d6eb4cc783fe05f39"
+  },
+  {
+   "article": 45,
+   "title": "The species group",
+   "url": "https://code.iczn.org/species-group-nominal-taxa-and-their-names/article-45-the-species-group/",
+   "chapter": 10,
+   "chapter_title": "Species-group nominal taxa and their names",
+   "reference": "10-species-group.md",
+   "sha256": "a722607a40e7b2bc12df6c9b0b4792b0731a3595181417ef0e47f611607bcb4e"
+  },
+  {
+   "article": 46,
+   "title": "Principle of Coordination",
+   "url": "https://code.iczn.org/species-group-nominal-taxa-and-their-names/article-46-principle-of-coordination/",
+   "chapter": 10,
+   "chapter_title": "Species-group nominal taxa and their names",
+   "reference": "10-species-group.md",
+   "sha256": "bfe2ac3f4c57eb074bf42eef12499b3910885ef1344045417346b858949d34f6"
+  },
+  {
+   "article": 47,
+   "title": "Nominotypical taxa",
+   "url": "https://code.iczn.org/species-group-nominal-taxa-and-their-names/article-47-nominotypical-taxa/",
+   "chapter": 10,
+   "chapter_title": "Species-group nominal taxa and their names",
+   "reference": "10-species-group.md",
+   "sha256": "140ab83c7b6cd1ca80bab12408bb0ec42aae3b57ea06183eba8fa3c7450ca383"
+  },
+  {
+   "article": 48,
+   "title": "Change of generic assignment",
+   "url": "https://code.iczn.org/species-group-nominal-taxa-and-their-names/article-48-change-of-generic-assignment/",
+   "chapter": 10,
+   "chapter_title": "Species-group nominal taxa and their names",
+   "reference": "10-species-group.md",
+   "sha256": "b0ba236ab7d411738d5a8b991cda0df369c74697dddfd5137acaeea7b9d2b76d"
+  },
+  {
+   "article": 49,
+   "title": "Use of species-group names wrongly applied through misidentification",
+   "url": "https://code.iczn.org/species-group-nominal-taxa-and-their-names/article-49-use-of-species-group-names-wrongly-applied-through-misidentification/",
+   "chapter": 10,
+   "chapter_title": "Species-group nominal taxa and their names",
+   "reference": "10-species-group.md",
+   "sha256": "66c965d5ade189cfece3350ce53c530728d991a887b19aced4fd1da17abdf7bf"
+  },
+  {
+   "article": 50,
+   "title": "Authors of names and nomenclatural acts",
+   "url": "https://code.iczn.org/authorship/article-50-authors-of-names-and-nomenclatural-acts/",
+   "chapter": 11,
+   "chapter_title": "Authorship",
+   "reference": "11-authorship.md",
+   "sha256": "2a0d4db3400d2e1fb5b6d0cbcb32ae250c3ebe257238ce9b1d8a6e6fccd110c4"
+  },
+  {
+   "article": 51,
+   "title": "Citation of names of authors",
+   "url": "https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/",
+   "chapter": 11,
+   "chapter_title": "Authorship",
+   "reference": "11-authorship.md",
+   "sha256": "f7811cf2e4606afba59fb95c242afe77c064a66f0ef587dbd63e88ba7e1ca6d3"
+  },
+  {
+   "article": 52,
+   "title": "Principle of Homonymy",
+   "url": "https://code.iczn.org/homonymy/article-52-principle-of-homonymy/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "0574a0f0ce977e65a41e2749bc8079fefbac52e27fb29f84c0be9ecf9bae9f2d"
+  },
+  {
+   "article": 53,
+   "title": "Definitions of homonymy in the family group, genus group and species group",
+   "url": "https://code.iczn.org/homonymy/article-53-definitions-of-homonymy-in-the-family-group-genus-group-and-species-group/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "c820624d8e813becfb1760672abb932f89491dbbc5553ab8799f1ad8a0fb7934"
+  },
+  {
+   "article": 54,
+   "title": "Names that do not enter into homonymy",
+   "url": "https://code.iczn.org/homonymy/article-54-names-that-do-not-enter-into-homonymy/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "7ac1f453bd07b1def8820d38ab1db836ede956599024e39643bb04549462846c"
+  },
+  {
+   "article": 55,
+   "title": "Family-group names",
+   "url": "https://code.iczn.org/homonymy/article-55-family-group-names/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "da310e4da24b3f0778fe1d9b4faef5ac1db29467e81d885babca865abc878360"
+  },
+  {
+   "article": 56,
+   "title": "Genus-group names",
+   "url": "https://code.iczn.org/homonymy/article-56-genus-group-names/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "ac9ec1b5f569ec64fb0f762d1fc83219ffdfe513d2b912f1ccd35c73860f72aa"
+  },
+  {
+   "article": 57,
+   "title": "Species-group names",
+   "url": "https://code.iczn.org/homonymy/article-57-species-group-names/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "c7486f30f83ab8f3fac26753de91c2b8336412f41d686af87e4f5bed70034e3b"
+  },
+  {
+   "article": 58,
+   "title": "Variant spellings of species-group names deemed to be identical",
+   "url": "https://code.iczn.org/homonymy/article-58-variant-spellings-of-species-group-names-deemed-to-be-identical/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "5d6950e3fe38e522bd8326db2be3c52d4c6c0cb5e26bf84724428999e3223578"
+  },
+  {
+   "article": 59,
+   "title": "Validity of secondary homonyms",
+   "url": "https://code.iczn.org/homonymy/new-page-2/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "f613a9de535b4249899fa977bd360ab977eb7798d2ddbaa94b573f137974f30e"
+  },
+  {
+   "article": 60,
+   "title": "Replacement of junior homonyms",
+   "url": "https://code.iczn.org/homonymy/article-60-replacement-of-junior-homonyms/",
+   "chapter": 12,
+   "chapter_title": "Homonymy",
+   "reference": "12-homonymy.md",
+   "sha256": "e13b5b2ecd229a8ff3b1496b9c6943fb2b21a05e03a814cf8fa79ed970eaf384"
+  },
+  {
+   "article": 61,
+   "title": "Principle of Typification",
+   "url": "https://code.iczn.org/the-type-concept-in-nomenclature/article-61-principle-of-typification/",
+   "chapter": 13,
+   "chapter_title": "The type concept in nomenclature",
+   "reference": "13-typification.md",
+   "sha256": "8df1559f23ae385cbe21036cd38a2d980051dd846fa7ce45082318376413e154"
+  },
+  {
+   "article": 62,
+   "title": "Application",
+   "url": "https://code.iczn.org/types-in-the-family-group/article-62-application/",
+   "chapter": 14,
+   "chapter_title": "Types in the family group",
+   "reference": "14-family-group-types.md",
+   "sha256": "7b1895fa6e51a3d4535bac518ccb558e8c210dddce3b9102016b8ad53d727ab6"
+  },
+  {
+   "article": 63,
+   "title": "Name-bearing types",
+   "url": "https://code.iczn.org/types-in-the-family-group/article-63-name-bearing-types/",
+   "chapter": 14,
+   "chapter_title": "Types in the family group",
+   "reference": "14-family-group-types.md",
+   "sha256": "ae054f0653286ec1d89e0bb6e7014a457c6806e298f97969de55728aa6eb90ad"
+  },
+  {
+   "article": 64,
+   "title": "Choice of type genus",
+   "url": "https://code.iczn.org/types-in-the-family-group/article-64-choice-of-type-genus/",
+   "chapter": 14,
+   "chapter_title": "Types in the family group",
+   "reference": "14-family-group-types.md",
+   "sha256": "d01bb5956c85f75dea9450338fed40eb9c7927247faa440df7fc2ca7b19a8f97"
+  },
+  {
+   "article": 65,
+   "title": "Identification of the type genus",
+   "url": "https://code.iczn.org/types-in-the-family-group/article-65-identification-of-the-type-genus/",
+   "chapter": 14,
+   "chapter_title": "Types in the family group",
+   "reference": "14-family-group-types.md",
+   "sha256": "4fb607ead5e14a465b036d0f2ac4cfc1574ee0777da71b147ee5f2864bff94d7"
+  },
+  {
+   "article": 66,
+   "title": "Application",
+   "url": "https://code.iczn.org/types-in-the-genus-group/article-66-application/",
+   "chapter": 15,
+   "chapter_title": "Types in the genus group",
+   "reference": "15-genus-group-types.md",
+   "sha256": "b6c522d0b7f95d6ce91efac771a0dcb5ed3c7004ecb16006d6bb625382b323ee"
+  },
+  {
+   "article": 67,
+   "title": "General provisions",
+   "url": "https://code.iczn.org/types-in-the-genus-group/article-67-general-provisions/",
+   "chapter": 15,
+   "chapter_title": "Types in the genus group",
+   "reference": "15-genus-group-types.md",
+   "sha256": "5d616373f3dab8f28af55c062f5884a4470f5fa0df23bb2d18480ea913712eb8"
+  },
+  {
+   "article": 68,
+   "title": "Type species fixed in the original publication",
+   "url": "https://code.iczn.org/types-in-the-genus-group/article-68-type-species-fixed-in-the-original-publication/",
+   "chapter": 15,
+   "chapter_title": "Types in the genus group",
+   "reference": "15-genus-group-types.md",
+   "sha256": "2d1aa9114edae923be493f5ab2f25937be2fbe857f3610e8f4353d1e087b5b1f"
+  },
+  {
+   "article": 69,
+   "title": "Type species not fixed in the original publication",
+   "url": "https://code.iczn.org/types-in-the-genus-group/article-69-type-species-not-fixed-in-the-original-publication/",
+   "chapter": 15,
+   "chapter_title": "Types in the genus group",
+   "reference": "15-genus-group-types.md",
+   "sha256": "98320711e983e7afc3ecc6e19eca8222709dcfcc9065894fcfd32bd769e3277f"
+  },
+  {
+   "article": 70,
+   "title": "Identification of the type species",
+   "url": "https://code.iczn.org/types-in-the-genus-group/article-70-identification-of-the-type-species/",
+   "chapter": 15,
+   "chapter_title": "Types in the genus group",
+   "reference": "15-genus-group-types.md",
+   "sha256": "0e52152efec91c5f8ac311efc0d2bff810fe452eefa4c29b91ca13a264e63345"
+  },
+  {
+   "article": 71,
+   "title": "Application",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-71-application/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "847bc1d236b0e8539cb3ca560b7bbf237f6d10c00e4b07519b7f623e5e504943"
+  },
+  {
+   "article": 72,
+   "title": "General provisions",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-72-general-provisions/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "799f46bc6b76bb51b2cc63347b2bddd83b50855812eeab529d6dc8da65809628"
+  },
+  {
+   "article": 73,
+   "title": "Name-bearing types fixed in the original publication (holotypes and syntypes)",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-73-name-bearing-types-fixed-in-the-original-publication-holotypes-and-syntypes/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "c6461a7a2fc9d66b3c2cedf462af970e7dfb9a5272d4e1a2cdd3cd90f42bab63"
+  },
+  {
+   "article": 74,
+   "title": "Name-bearing types fixed subsequently from the type series (lectotypes from syntypes)",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-74-name-bearing-types-fixed-subsequently-from-the-type-series-lectotypes-from-syntypes/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "a3a7640779a108c95614c19bfad491a1b731537b8f60d1092750476685e5c6c9"
+  },
+  {
+   "article": 75,
+   "title": "Neotypes",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-75-neotypes/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "3801a06ed1e3b21548a20247201de3c24b3cf48e6b3efe4b6fb71ce651e5e92e"
+  },
+  {
+   "article": 76,
+   "title": "Type locality",
+   "url": "https://code.iczn.org/types-in-the-species-group/article-76-type-locality/",
+   "chapter": 16,
+   "chapter_title": "Types in the species group",
+   "reference": "16-species-group-types.md",
+   "sha256": "b3f6de6729bbe1c8668a3762bc688c7e6afb47a09532d60ff38ff499e1e95507"
+  },
+  {
+   "article": 77,
+   "title": "Relation of Commission to international bodies from which it derives functions and powers",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-77-relation-of-commission-to-international-bodies-from-which-it-derives-functions-and-powers/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "6f61456aac069dec6b8391ae83648b794342ba175bccd9ea578023f2bf1177ba"
+  },
+  {
+   "article": 78,
+   "title": "Powers and duties of the Commission",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-78-powers-and-duties-of-the-commission/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "d7b976f069f2fa94d7618b53bfc9acbb36e995b81b2a88275549af994ee9544f"
+  },
+  {
+   "article": 79,
+   "title": "List of Available Names in Zoology",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-79-list-of-available-names-in-zoology/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "5c7b70c27982cd549974879e4a9bffd9b2d26ba312f4acd1a3569d1c8029a80b"
+  },
+  {
+   "article": 80,
+   "title": "Status of actions of the Commission",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-80-status-of-actions-of-the-commission/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "a38c2cb7a7bc7cabd14fb270fb74498032e0583943caac9c4ad9339d5398cf4b"
+  },
+  {
+   "article": 81,
+   "title": "Use of the Plenary Power",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-81-use-of-the-plenary-power/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "91c0f83a8599f0d442f6854f1a44147b96187db15003f82f0890484adecc6eab"
+  },
+  {
+   "article": 82,
+   "title": "Status of case under consideration",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-82-status-of-case-under-consideration/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "a6c93707f4a58bb503395993edb7ba103c0d7c56a6cafef177aef12e318513bc"
+  },
+  {
+   "article": 83,
+   "title": "Obligations and discretion of the Commission",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-83-obligations-and-discretion-of-the-commission/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "379533f998991b153b855affebb25e10e13dfe578f2728605cd0d60a471a511d"
+  },
+  {
+   "article": 84,
+   "title": "Constitution and Bylaws",
+   "url": "https://code.iczn.org/the-international-commission-on-zoological-nomenclature/article-84-constitution-and-bylaws/",
+   "chapter": 17,
+   "chapter_title": "The International Commission on Zoological Nomenclature",
+   "reference": "17-commission.md",
+   "sha256": "844c3b9248de2ffd3e55d1ff5be45ad4191c21d040d288d3e6de6d194c413051"
+  },
+  {
+   "article": 85,
+   "title": "Title and authorship",
+   "url": "https://code.iczn.org/regulations-governing-this-code/article-85-title-and-authorship/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "e079111f09a9dbb931a36c7287b0b32b3f414fb3a32a4f2e0780e5f0ae9da199"
+  },
+  {
+   "article": 86,
+   "title": "Effective date and force of the Code",
+   "url": "https://code.iczn.org/regulations-governing-this-code/new-page-2/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "97bbefad61bf9e54017fde03bbd3697b85c5aae012e3c5049934eaad7e1fa519"
+  },
+  {
+   "article": 87,
+   "title": "Official Texts",
+   "url": "https://code.iczn.org/regulations-governing-this-code/article-87-official-texts/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "ea59e4bbeb07d6ecd21062543d9e35591927df3dbda008a0312d3d570427a3db"
+  },
+  {
+   "article": 88,
+   "title": "Application of the Code",
+   "url": "https://code.iczn.org/regulations-governing-this-code/article-88-application-of-the-code/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "c9245b157ee92ca38ef866a5b55cf465a2b1e5001e16f60583c66ddc37bb3f41"
+  },
+  {
+   "article": 89,
+   "title": "Interpretation of the Code",
+   "url": "https://code.iczn.org/regulations-governing-this-code/article-89-interpretation-of-the-code/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "03957993dc2b467492163c69b597cf8ead5b9cc1919fb2560c6382a28d8bb521"
+  },
+  {
+   "article": 90,
+   "title": "Amendments of the Code",
+   "url": "https://code.iczn.org/regulations-governing-this-code/article-90-amendments-of-the-code/",
+   "chapter": 18,
+   "chapter_title": "Regulations governing this Code",
+   "reference": "18-regulations.md",
+   "sha256": "f7ec416f64f5a144fde9260c90664cd6f742a4f7581bc4fb63e1f96bae85e9e9"
+  }
+ ],
+ "sections": {
+  "index": {
+   "url": "https://code.iczn.org/",
+   "sha256": "6dc2424044ba9d2f18476fa715725aaa1909aa304f59c0cb21bc02d338f4c29f",
+   "title": "Home"
+  },
+  "appendices": {
+   "url": "https://code.iczn.org/appendices/",
+   "sha256": "5d5c8789985e45be0478167b4b2093ea33409f9a91b7ddb33ed58f4c890831d5",
+   "title": "Appendices"
+  },
+  "appendices/appendix-a-code-of-ethics": {
+   "url": "https://code.iczn.org/appendices/appendix-a-code-of-ethics/",
+   "sha256": "8613d958e9e73890c2182159db1e8711b72d9c58353824b4902d8fab2e6ab591",
+   "title": "Appendix A: Code of Ethics"
+  },
+  "appendices/appendix-b-general-recommendations": {
+   "url": "https://code.iczn.org/appendices/appendix-b-general-recommendations/",
+   "sha256": "146e16d80bfd343c24de777809c68c44e5456237ab9592ecb0ab8596e76abfc0",
+   "title": "Appendix B: General Recommendations"
+  },
+  "appendices/constitution-of-the-iczn": {
+   "url": "https://code.iczn.org/appendices/constitution-of-the-iczn/",
+   "sha256": "28d550e84afbe474ff5c1a0d63244fd265c8e139fb8e7499db16f6811b9b18a4",
+   "title": "Constitution of the ICZN"
+  },
+  "explanatory-note-on-the-code": {
+   "url": "https://code.iczn.org/explanatory-note-on-the-code/",
+   "sha256": "4c8ceececbf2db34d369424868c650c1372558b41645041914bc1dfda05aad52",
+   "title": "Explanatory Note on The Code"
+  },
+  "glossary-2": {
+   "url": "https://code.iczn.org/glossary-2/",
+   "sha256": "3e131e034b76a94f558ad4ba32f47457fd087d6590c387e6898072c817467ac9",
+   "title": "Glossary"
+  },
+  "introduction": {
+   "url": "https://code.iczn.org/introduction/",
+   "sha256": "24fe83f297c3380da63ca988303833aa78a7bc2d8a5961d136fffdcdbfb37301",
+   "title": "Introduction"
+  },
+  "preamble": {
+   "url": "https://code.iczn.org/preamble/",
+   "sha256": "dd976079f72d94a9c95746829fbf9503325ca78191ca7026ce83cb003a97f799",
+   "title": "Preamble"
+  },
+  "preface-to-the-fourth-edition": {
+   "url": "https://code.iczn.org/preface-to-the-fourth-edition/",
+   "sha256": "0aa5084ae0cc4f76d4b15b02749c7a6e11ccc53e9c4664e0542d8b1d551b63f8",
+   "title": "Preface to the Fourth Edition"
+  },
+  "summary": {
+   "url": "https://code.iczn.org/summary/",
+   "sha256": "172b68bf2646369602378de6dc928b10147ca36008bcf4aa87bbceb2990b8bee",
+   "title": "Summary"
+  }
+ }
+}

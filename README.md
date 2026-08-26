@@ -13,6 +13,7 @@ npx skills add https://github.com/edalcin/biodiversityDataSkills --skill skos-xl
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill biohousekeeper
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill grist-master
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill DataProvenance
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill iczn
 ```
 
 Or install every skill in the repo at once:
@@ -32,6 +33,7 @@ Each skill has its own Python dependencies — see that skill's **Setup** sectio
 | [biohousekeeper](./biohousekeeper/) | Analyze a biodiversity spreadsheet (CSV/XLSX) and propose a Darwin Core-aligned column structure, asking the user about ambiguous splits/merges before restructuring | `pandas`, `openpyxl` |
 | [grist-master](./grist-master/) | Reference knowledge for [Grist](https://www.getgrist.com/) — REST/SQL API, MCP server, Python formulas, access rules, self-hosting | none (pure reference) |
 | [DataProvenance](./DataProvenance/) | Reference knowledge for the [W3C PROV](https://www.w3.org/TR/prov-overview/) standard — PROV-DM, PROV-O (RDF), PROV-N (notation), PROV-XML, for documenting dataset lineage | none (pure reference) |
+| [iczn](./iczn/) | Reference knowledge for the [International Code of Zoological Nomenclature](https://code.iczn.org/) — availability, priority, homonymy, typification, ZooBank/electronic publication, and a name/taxon/act data model for taxonomic databases | none (pure reference) |
 
 ## Skills Interoperability
 
@@ -49,6 +51,8 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 | Understand DwC class relationships (Event, Occurrence, Survey…) | darwin-core (DwC-CM reference) |
 | Create a relational DwC-DP data package (replaces DwC-A star schema) | darwin-core (DwC-DP guide) |
 | Restructure a legacy spreadsheet's columns to match Darwin Core, with composite-field splitting | biohousekeeper (`analyze.py` + `apply.py`) |
+| Check whether a zoological name is available/valid and cite the governing ICZN Article | iczn (`validate_name.py`, `explain.py`) |
+| Map ICZN nomenclatural concepts to Darwin Core `nomenclaturalStatus`/`taxonomicStatus` | iczn + darwin-core |
 
 ---
 

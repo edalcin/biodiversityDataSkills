@@ -1,0 +1,1 @@
+{"nodes": [{"id": "grist_glossary", "label": "Grist Glossary", "file_type": "document", "source_file": "grist-master/references/GLOSSARY.md"}], "edges": [{"source": "grist_glossary", "target": "grist_formulas_and_functions", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "grist-master/references/GLOSSARY.md"}], "hyperedges": []}

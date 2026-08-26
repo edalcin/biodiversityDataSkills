@@ -1,0 +1,1 @@
+{"nodes": [{"id": "grist_mcp_server", "label": "Grist MCP Server", "file_type": "document", "source_file": "grist-master/references/MCP_SERVER.md"}], "edges": [{"source": "grist_mcp_server", "target": "grist_integrations", "relation": "references", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "grist-master/references/MCP_SERVER.md"}], "hyperedges": []}

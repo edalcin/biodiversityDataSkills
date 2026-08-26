@@ -1,0 +1,72 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1782483384.7607727,
+    "ast_hash": "7bf81dca0376bde3a32244b82bc7cbc0",
+    "semantic_hash": "7bf81dca0376bde3a32244b82bc7cbc0"
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1780743799.6526995,
+    "ast_hash": "c1f7816c4aa2229b23c2756c58561749",
+    "semantic_hash": "c1f7816c4aa2229b23c2756c58561749"
+  },
+  ".remember/tmp/last-ndc.ts": {
+    "mtime": 1780742525.2878811,
+    "ast_hash": "9a4f33fca1c6f87fdc12b2676a609db5",
+    "semantic_hash": "9a4f33fca1c6f87fdc12b2676a609db5"
+  },
+  ".remember/tmp/last-save.json": {
+    "mtime": 1780744366.6095388,
+    "ast_hash": "c931d61d427db4b5c73c5610f481a6b4",
+    "semantic_hash": "c931d61d427db4b5c73c5610f481a6b4"
+  },
+  "darwin-core/scripts/explain.py": {
+    "mtime": 1778937296.266426,
+    "ast_hash": "e3f55651b67aa1dea1389d163ea4b2ab",
+    "semantic_hash": "e3f55651b67aa1dea1389d163ea4b2ab"
+  },
+  "darwin-core/scripts/generate_template.py": {
+    "mtime": 1778937321.0747087,
+    "ast_hash": "000aac9dd70d99903c66b9e872adc3f7",
+    "semantic_hash": "000aac9dd70d99903c66b9e872adc3f7"
+  },
+  "darwin-core/scripts/map_columns.py": {
+    "mtime": 1778937338.983108,
+    "ast_hash": "c7642b1fbf99a3312fd49b32d1ece212",
+    "semantic_hash": "c7642b1fbf99a3312fd49b32d1ece212"
+  },
+  "darwin-core/scripts/sync.py": {
+    "mtime": 1778937346.2359805,
+    "ast_hash": "a395738bf9116b36c6f50cc8f95515d8",
+    "semantic_hash": "a395738bf9116b36c6f50cc8f95515d8"
+  },
+  "darwin-core/scripts/validate.py": {
+    "mtime": 1778937309.670442,
+    "ast_hash": "dd7b009747396536c578c8cc8e6906dd",
+    "semantic_hash": "dd7b009747396536c578c8cc8e6906dd"
+  },
+  "skos-xl/scripts/convert.py": {
+    "mtime": 1780742606.71938,
+    "ast_hash": "7267035df62cef3f8cf29236812aff3e",
+    "semantic_hash": "7267035df62cef3f8cf29236812aff3e"
+  },
+  "skos-xl/scripts/explain.py": {
+    "mtime": 1780743418.186224,
+    "ast_hash": "56c3dec2f8a1ae7d0431fa4dbf6804a5",
+    "semantic_hash": "56c3dec2f8a1ae7d0431fa4dbf6804a5"
+  },
+  "skos-xl/scripts/generate.py": {
+    "mtime": 1780743305.3432312,
+    "ast_hash": "17da162b10ad7e7c64911eb97ef6f308",
+    "semantic_hash": "17da162b10ad7e7c64911eb97ef6f308"
+  },
+  "skos-xl/scripts/sync.py": {
+    "mtime": 1780742606.71938,
+    "ast_hash": "8a799f63edc85f91b1eff3a58c58c04d",
+    "semantic_hash": "8a799f63edc85f91b1eff3a58c58c04d"
+  },
+  "skos-xl/scripts/validate.py": {
+    "mtime": 1780743362.894307,
+    "ast_hash": "b217ae90ffe3ddb5eb19d628e8a46f83",
+    "semantic_hash": "b217ae90ffe3ddb5eb19d628e8a46f83"
+  }
+}

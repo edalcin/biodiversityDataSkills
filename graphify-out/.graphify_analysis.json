@@ -1,0 +1,520 @@
+{
+  "communities": {
+    "0": [
+      "dataprovenance_references_data_model_1_what_prov_dm_is",
+      "dataprovenance_references_data_model_2_core_types",
+      "dataprovenance_references_data_model_3_core_relations_components_1_3",
+      "dataprovenance_references_data_model_4_component_4_bundles_5_4",
+      "dataprovenance_references_data_model_5_component_5_alternate_entities_5_5",
+      "dataprovenance_references_data_model_6_component_6_collections_5_6",
+      "dataprovenance_references_data_model_7_further_elements_of_prov_dm_5_7",
+      "dataprovenance_references_data_model_8_cross_reference_to_prov_n_and_prov_o_appendix_a",
+      "dataprovenance_references_data_model_activity_5_1_2",
+      "dataprovenance_references_data_model_agent_5_3_1",
+      "dataprovenance_references_data_model_agent_sub_kinds_extended_structures_5_3_1",
+      "dataprovenance_references_data_model_alternate_5_5_2",
+      "dataprovenance_references_data_model_attribute_5_7_2",
+      "dataprovenance_references_data_model_bundle_constructor_5_4_1",
+      "dataprovenance_references_data_model_bundle_type_5_4_2",
+      "dataprovenance_references_data_model_collection_and_emptycollection_5_6_1",
+      "dataprovenance_references_data_model_core_vs_extended_structures",
+      "dataprovenance_references_data_model_entity_5_1_1",
+      "dataprovenance_references_data_model_extensibility_points_6_non_normative_summary",
+      "dataprovenance_references_data_model_identifier_5_7_1",
+      "dataprovenance_references_data_model_mapping_specific_relations_onto_influence_s_influencee_influencer_table_7_5_3_5",
+      "dataprovenance_references_data_model_membership_5_6_2",
+      "dataprovenance_references_data_model_namespace_declaration_5_7_4",
+      "dataprovenance_references_data_model_plan_5_3_3",
+      "dataprovenance_references_data_model_prov_dm_predefined_types_table_9_5_7_2_4",
+      "dataprovenance_references_data_model_prov_dm_the_prov_data_model",
+      "dataprovenance_references_data_model_qualified_name_5_7_5",
+      "dataprovenance_references_data_model_specialization_5_5_1",
+      "dataprovenance_references_data_model_the_six_components",
+      "dataprovenance_references_data_model_value_5_7_3"
+    ],
+    "1": [
+      "dataprovenance_references_prov_n_1_1_functional_style_syntax",
+      "dataprovenance_references_prov_n_1_2_ebnf_grammar_conventions",
+      "dataprovenance_references_prov_n_1_3_optional_terms_and_the_marker",
+      "dataprovenance_references_prov_n_1_4_identifiers_and_attributes",
+      "dataprovenance_references_prov_n_1_5_qualified_names_namespaces",
+      "dataprovenance_references_prov_n_1_6_comments",
+      "dataprovenance_references_prov_n_1_grammar_basics",
+      "dataprovenance_references_prov_n_2_1_component_1_entities_and_activities",
+      "dataprovenance_references_prov_n_2_2_component_2_derivations",
+      "dataprovenance_references_prov_n_2_3_component_3_agents_responsibility_and_influence",
+      "dataprovenance_references_prov_n_2_4_component_4_bundles",
+      "dataprovenance_references_prov_n_2_5_component_5_alternate_entities",
+      "dataprovenance_references_prov_n_2_6_component_6_collections",
+      "dataprovenance_references_prov_n_2_7_extensibility_expressions",
+      "dataprovenance_references_prov_n_2_expressions_per_component",
+      "dataprovenance_references_prov_n_3_1_identifier_kinds",
+      "dataprovenance_references_prov_n_3_2_attribute",
+      "dataprovenance_references_prov_n_3_3_literal",
+      "dataprovenance_references_prov_n_3_4_namespace_declaration",
+      "dataprovenance_references_prov_n_3_shared_building_blocks",
+      "dataprovenance_references_prov_n_4_documents_and_namespaces",
+      "dataprovenance_references_prov_n_5_extensibility",
+      "dataprovenance_references_prov_n_6_media_type",
+      "dataprovenance_references_prov_n_prov_n_the_provenance_notation"
+    ],
+    "2": [
+      "biohousekeeper_scripts_analyze",
+      "biohousekeeper_scripts_analyze_analyze_columns",
+      "biohousekeeper_scripts_analyze_build_report_md",
+      "biohousekeeper_scripts_analyze_columns_similarity",
+      "biohousekeeper_scripts_analyze_detect_binomial",
+      "biohousekeeper_scripts_analyze_detect_coordinate_pair",
+      "biohousekeeper_scripts_analyze_detect_locality_delimiter",
+      "biohousekeeper_scripts_analyze_detect_operations",
+      "biohousekeeper_scripts_analyze_in_range",
+      "biohousekeeper_scripts_analyze_load_dwc_terms",
+      "biohousekeeper_scripts_analyze_looks_like_lat",
+      "biohousekeeper_scripts_analyze_looks_like_lon",
+      "biohousekeeper_scripts_analyze_looks_numeric",
+      "biohousekeeper_scripts_analyze_main",
+      "biohousekeeper_scripts_analyze_missing_recommended",
+      "biohousekeeper_scripts_analyze_normalize_column_name",
+      "biohousekeeper_scripts_analyze_rationale_196",
+      "biohousekeeper_scripts_analyze_rationale_238",
+      "biohousekeeper_scripts_analyze_rationale_454",
+      "biohousekeeper_scripts_analyze_read_spreadsheet",
+      "biohousekeeper_scripts_analyze_sample_values",
+      "biohousekeeper_scripts_analyze_strip_accents"
+    ],
+    "3": [
+      "dataprovenance_references_prov_xml_1_prov_namespace",
+      "dataprovenance_references_prov_xml_2_1_schema_modularization",
+      "dataprovenance_references_prov_xml_2_2_salami_slice_design_pattern",
+      "dataprovenance_references_prov_xml_2_3_elements_vs_attributes",
+      "dataprovenance_references_prov_xml_2_4_type_conventions",
+      "dataprovenance_references_prov_xml_2_5_identifier_conventions",
+      "dataprovenance_references_prov_xml_2_6_naming_conventions",
+      "dataprovenance_references_prov_xml_2_xml_schema_design_conventions_source_2",
+      "dataprovenance_references_prov_xml_3_xml_elements_per_component_source_3",
+      "dataprovenance_references_prov_xml_4_worked_example",
+      "dataprovenance_references_prov_xml_5_media_type_source_4",
+      "dataprovenance_references_prov_xml_component_1_entities_and_activities",
+      "dataprovenance_references_prov_xml_component_2_derivations",
+      "dataprovenance_references_prov_xml_component_3_agents_responsibility_and_influence",
+      "dataprovenance_references_prov_xml_component_4_bundles",
+      "dataprovenance_references_prov_xml_component_5_alternate_entities",
+      "dataprovenance_references_prov_xml_component_6_collections",
+      "dataprovenance_references_prov_xml_further_elements_of_prov_source_3_7_and_structural_elements_source_3_8",
+      "dataprovenance_references_prov_xml_prov_xml_the_prov_xml_schema",
+      "dataprovenance_references_prov_xml_schema_documents_source_appendix_a"
+    ],
+    "4": [
+      "dataprovenance_references_data_model",
+      "dataprovenance_references_glossary",
+      "dataprovenance_references_glossary_prov_glossary",
+      "dataprovenance_references_prov_n",
+      "dataprovenance_references_prov_o",
+      "dataprovenance_references_prov_o_classes",
+      "dataprovenance_references_prov_o_expanded_terms",
+      "dataprovenance_references_prov_o_properties",
+      "dataprovenance_references_prov_o_prov_o_the_prov_ontology",
+      "dataprovenance_references_prov_o_qualifiable_relations",
+      "dataprovenance_references_prov_o_qualified_and_supporting_properties",
+      "dataprovenance_references_prov_o_qualified_classes",
+      "dataprovenance_references_prov_o_qualified_terms",
+      "dataprovenance_references_prov_o_see_also",
+      "dataprovenance_references_prov_o_starting_point_terms",
+      "dataprovenance_references_prov_o_why_qualification_exists",
+      "dataprovenance_references_prov_o_worked_example_unqualified_qualified",
+      "dataprovenance_references_prov_xml"
+    ],
+    "5": [
+      "grist_master_references_access_rules_access_rule_memos",
+      "grist_master_references_access_rules_basic_conditions",
+      "grist_master_references_access_rules_column_restriction",
+      "grist_master_references_access_rules_enabling_disabling",
+      "grist_master_references_access_rules_grist_access_rules",
+      "grist_master_references_access_rules_link_keys",
+      "grist_master_references_access_rules_permissions",
+      "grist_master_references_access_rules_private_table",
+      "grist_master_references_access_rules_rec_and_newrec",
+      "grist_master_references_access_rules_recipes",
+      "grist_master_references_access_rules_reference_templates",
+      "grist_master_references_access_rules_row_level_access_control",
+      "grist_master_references_access_rules_rule_evaluation_order",
+      "grist_master_references_access_rules_seed_rules",
+      "grist_master_references_access_rules_special_document_wide_rules",
+      "grist_master_references_access_rules_the_user_variable",
+      "grist_master_references_access_rules_user_attribute_tables",
+      "grist_master_references_access_rules_view_as_another_user"
+    ],
+    "6": [
+      "grist_master_references_access_rules",
+      "grist_master_references_column_types",
+      "grist_master_references_column_types_attachment_columns",
+      "grist_master_references_column_types_choice_choice_list_columns",
+      "grist_master_references_column_types_date_datetime_columns",
+      "grist_master_references_column_types_four_relationship_shapes_design_guidance",
+      "grist_master_references_column_types_grist_column_types_references",
+      "grist_master_references_column_types_managing_columns",
+      "grist_master_references_column_types_numeric_integer_columns",
+      "grist_master_references_column_types_reference_columns",
+      "grist_master_references_column_types_reference_list_columns",
+      "grist_master_references_column_types_supported_types",
+      "grist_master_references_column_types_text_columns",
+      "grist_master_references_column_types_toggle_columns",
+      "grist_master_references_column_types_type_inference_inspection"
+    ],
+    "7": [
+      "darwin_core_scripts_validate_py_scripts_validate",
+      "darwin_core_scripts_validate_py_scripts_validate_main",
+      "scripts_validate_extract_meta_xml",
+      "scripts_validate_load_valid_terms",
+      "scripts_validate_rationale_138",
+      "scripts_validate_rationale_159",
+      "scripts_validate_rationale_39",
+      "scripts_validate_rationale_54",
+      "scripts_validate_rationale_63",
+      "scripts_validate_rationale_79",
+      "scripts_validate_validate_meta_xml",
+      "scripts_validate_validate_referenced_files",
+      "scripts_validate_validate_terms",
+      "scripts_validate_validate_zip"
+    ],
+    "8": [
+      "dataprovenance_references_primer",
+      "dataprovenance_references_primer_activities",
+      "dataprovenance_references_primer_agents_and_responsibility",
+      "dataprovenance_references_primer_alternate_entities_and_specialization",
+      "dataprovenance_references_primer_derivation_and_revision",
+      "dataprovenance_references_primer_entities",
+      "dataprovenance_references_primer_intuitive_overview",
+      "dataprovenance_references_primer_plans",
+      "dataprovenance_references_primer_prov_n_relations_used_in_the_worked_example",
+      "dataprovenance_references_primer_prov_primer",
+      "dataprovenance_references_primer_roles",
+      "dataprovenance_references_primer_summary",
+      "dataprovenance_references_primer_time",
+      "dataprovenance_references_primer_usage_and_generation"
+    ],
+    "9": [
+      "darwin_core_scripts_explain_py_scripts_explain",
+      "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "darwin_core_scripts_explain_py_scripts_explain_main",
+      "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "scripts_explain_load_detailed_terms",
+      "scripts_explain_load_term_names",
+      "scripts_explain_rationale_108",
+      "scripts_explain_rationale_134",
+      "scripts_explain_rationale_28",
+      "scripts_explain_rationale_41",
+      "scripts_explain_rationale_58",
+      "scripts_explain_show_overview"
+    ],
+    "10": [
+      "scripts_explain_list_cta_terms",
+      "scripts_explain_load_terms",
+      "scripts_explain_normalize_term",
+      "scripts_explain_show_cta_overview",
+      "scripts_explain_show_cta_term",
+      "scripts_explain_show_skos_overview",
+      "scripts_explain_show_skosxl_overview",
+      "skos_xl_scripts_explain_py_scripts_explain",
+      "skos_xl_scripts_explain_py_scripts_explain_list_terms",
+      "skos_xl_scripts_explain_py_scripts_explain_main",
+      "skos_xl_scripts_explain_py_scripts_explain_show_term_detail"
+    ],
+    "11": [
+      "biodiversitydataskills_repo",
+      "biohousekeeper_skill",
+      "darwin_core_skill",
+      "dataprovenance_skill",
+      "grist_master_skill",
+      "skos_xl_cta",
+      "skos_xl_dwc",
+      "skos_xl_requirements",
+      "skos_xl_skill",
+      "w3c_prov"
+    ],
+    "12": [
+      "biohousekeeper_scripts_apply",
+      "biohousekeeper_scripts_apply_apply_derive_taxon_epithets",
+      "biohousekeeper_scripts_apply_apply_drop_redundant",
+      "biohousekeeper_scripts_apply_apply_merge_date_parts",
+      "biohousekeeper_scripts_apply_apply_split_coordinates",
+      "biohousekeeper_scripts_apply_apply_split_locality",
+      "biohousekeeper_scripts_apply_main",
+      "biohousekeeper_scripts_apply_read_spreadsheet",
+      "biohousekeeper_scripts_apply_unique_name",
+      "biohousekeeper_scripts_apply_write_spreadsheet"
+    ],
+    "13": [
+      "grist_faq",
+      "grist_formulas_and_functions",
+      "grist_formulas_python",
+      "grist_glossary",
+      "grist_integrations",
+      "grist_mcp_server",
+      "grist_sandboxing",
+      "grist_self_hosted",
+      "grist_summary_tables",
+      "grist_trigger_formulas"
+    ],
+    "14": [
+      "grist_master_references_api_reference",
+      "grist_master_references_api_reference_api_client_libraries",
+      "grist_master_references_api_reference_api_keys_script_personal_use",
+      "grist_master_references_api_reference_authentication",
+      "grist_master_references_api_reference_grist_rest_api_reference",
+      "grist_master_references_api_reference_oauth_apps_third_party_tools_ai_agents_partner_apps",
+      "grist_master_references_api_reference_rest_endpoint_groups",
+      "grist_master_references_api_reference_scopes",
+      "grist_master_references_api_reference_sql_endpoint",
+      "grist_master_references_api_reference_webhooks"
+    ],
+    "15": [
+      "scripts_generate",
+      "scripts_generate_bind_common",
+      "scripts_generate_build_basic",
+      "scripts_generate_build_dwc_names",
+      "scripts_generate_build_dwc_vocab",
+      "scripts_generate_build_etno_tk",
+      "scripts_generate_main",
+      "scripts_generate_rationale_135",
+      "scripts_generate_rationale_187",
+      "scripts_generate_rationale_251"
+    ],
+    "16": [
+      "scripts_map_columns",
+      "scripts_map_columns_convert_csv",
+      "scripts_map_columns_load_dwc_terms",
+      "scripts_map_columns_main",
+      "scripts_map_columns_normalize_column_name",
+      "scripts_map_columns_rationale_141",
+      "scripts_map_columns_rationale_155",
+      "scripts_map_columns_rationale_163",
+      "scripts_map_columns_rationale_195",
+      "scripts_map_columns_suggest_mapping"
+    ],
+    "17": [
+      "scripts_convert",
+      "scripts_convert_detect_format",
+      "scripts_convert_downgrade_from_xl",
+      "scripts_convert_main",
+      "scripts_convert_rationale_63",
+      "scripts_convert_rationale_92",
+      "scripts_convert_upgrade_to_xl"
+    ],
+    "18": [
+      "scripts_validate_detect_format",
+      "scripts_validate_label_of",
+      "scripts_validate_rationale_205",
+      "scripts_validate_run_cta_checks",
+      "scripts_validate_run_standard_checks",
+      "skos_xl_scripts_validate_py_scripts_validate",
+      "skos_xl_scripts_validate_py_scripts_validate_main"
+    ],
+    "19": [
+      "scripts_generate_template",
+      "scripts_generate_template_generate_example_csv",
+      "scripts_generate_template_generate_meta_xml",
+      "scripts_generate_template_main",
+      "scripts_generate_template_rationale_101",
+      "scripts_generate_template_rationale_78"
+    ],
+    "20": [
+      "darwin_core_scripts_sync_py_scripts_sync",
+      "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "darwin_core_scripts_sync_py_scripts_sync_main",
+      "scripts_sync_rationale_46"
+    ],
+    "21": [
+      "skos_xl_scripts_sync_py_scripts_sync",
+      "skos_xl_scripts_sync_py_scripts_sync_download_file",
+      "skos_xl_scripts_sync_py_scripts_sync_main"
+    ],
+    "22": [
+      "dwc_cm",
+      "dwc_dp"
+    ],
+    "23": [
+      "dwc_a"
+    ],
+    "24": [
+      "dwc_extensions"
+    ],
+    "25": [
+      "skos_xl_references_skos_guide"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06666666666666667,
+    "1": 0.08333333333333333,
+    "2": 0.18614718614718614,
+    "3": 0.1,
+    "4": 0.1437908496732026,
+    "5": 0.1111111111111111,
+    "6": 0.13333333333333333,
+    "7": 0.2087912087912088,
+    "8": 0.14285714285714285,
+    "9": 0.24242424242424243,
+    "10": 0.34545454545454546,
+    "11": 0.2222222222222222,
+    "12": 0.35555555555555557,
+    "13": 0.2,
+    "14": 0.2,
+    "15": 0.37777777777777777,
+    "16": 0.28888888888888886,
+    "17": 0.42857142857142855,
+    "18": 0.5238095238095238,
+    "19": 0.4666666666666667,
+    "20": 0.6666666666666666,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0
+  },
+  "gods": [
+    {
+      "id": "grist_master_references_column_types_grist_column_types_references",
+      "label": "Grist Column Types & References",
+      "degree": 13
+    },
+    {
+      "id": "grist_master_references_access_rules_grist_access_rules",
+      "label": "Grist Access Rules",
+      "degree": 12
+    },
+    {
+      "id": "dataprovenance_references_primer_intuitive_overview",
+      "label": "Intuitive overview",
+      "degree": 10
+    },
+    {
+      "id": "dataprovenance_references_data_model_prov_dm_the_prov_data_model",
+      "label": "PROV-DM: The PROV Data Model",
+      "degree": 9
+    },
+    {
+      "id": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "label": "main()",
+      "degree": 9
+    },
+    {
+      "id": "biohousekeeper_scripts_analyze_detect_operations",
+      "label": "detect_operations()",
+      "degree": 9
+    },
+    {
+      "id": "dataprovenance_references_prov_n_2_expressions_per_component",
+      "label": "2. Expressions per component",
+      "degree": 8
+    },
+    {
+      "id": "dataprovenance_references_prov_xml_3_xml_elements_per_component_source_3",
+      "label": "3. XML elements per component (source §3)",
+      "degree": 8
+    },
+    {
+      "id": "dataprovenance_references_data_model_7_further_elements_of_prov_dm_5_7",
+      "label": "7. Further elements of PROV-DM (§5.7)",
+      "degree": 7
+    },
+    {
+      "id": "dataprovenance_references_prov_n_prov_n_the_provenance_notation",
+      "label": "PROV-N: The Provenance Notation",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "biodiversityDataSkills",
+      "target": "BioHousekeeper Skill",
+      "source_files": [
+        "README.md",
+        "biohousekeeper/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `BioHousekeeper Skill` unexpectedly reaches hub `biodiversityDataSkills`"
+    },
+    {
+      "source": "biodiversityDataSkills",
+      "target": "Darwin Core Skill",
+      "source_files": [
+        "README.md",
+        "darwin-core/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Darwin Core Skill` unexpectedly reaches hub `biodiversityDataSkills`"
+    },
+    {
+      "source": "biodiversityDataSkills",
+      "target": "DataProvenance Skill",
+      "source_files": [
+        "README.md",
+        "DataProvenance/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `DataProvenance Skill` unexpectedly reaches hub `biodiversityDataSkills`"
+    },
+    {
+      "source": "biodiversityDataSkills",
+      "target": "Grist Master Skill",
+      "source_files": [
+        "README.md",
+        "grist-master/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Grist Master Skill` unexpectedly reaches hub `biodiversityDataSkills`"
+    },
+    {
+      "source": "biodiversityDataSkills",
+      "target": "SKOS-XL Skill",
+      "source_files": [
+        "README.md",
+        "skos-xl/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `PROV-DM: The PROV Data Model` connect `PROV-DM: The PROV Data Model` to `PROV_N.md`?",
+      "why": "High betweenness centrality (0.061) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `PROV-N: The Provenance Notation` connect `2. Expressions per component` to `PROV_N.md`?",
+      "why": "High betweenness centrality (0.050) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `PROV-XML: The PROV XML Schema` connect `3. XML elements per component (source §3)` to `PROV_N.md`?",
+      "why": "High betweenness centrality (0.042) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Core vs. extended structures`, `The six components`, `Entity (§5.1.1)` to the rest of the system?",
+      "why": "126 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `PROV-DM: The PROV Data Model` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `2. Expressions per component` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `3. XML elements per component (source §3)` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

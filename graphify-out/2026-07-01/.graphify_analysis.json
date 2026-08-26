@@ -1,0 +1,266 @@
+{
+  "communities": {
+    "0": [
+      "darwin_core_scripts_validate_py_scripts_validate",
+      "darwin_core_scripts_validate_py_scripts_validate_main",
+      "scripts_validate_extract_meta_xml",
+      "scripts_validate_load_valid_terms",
+      "scripts_validate_rationale_138",
+      "scripts_validate_rationale_159",
+      "scripts_validate_rationale_39",
+      "scripts_validate_rationale_54",
+      "scripts_validate_rationale_63",
+      "scripts_validate_rationale_79",
+      "scripts_validate_validate_meta_xml",
+      "scripts_validate_validate_referenced_files",
+      "scripts_validate_validate_terms",
+      "scripts_validate_validate_zip"
+    ],
+    "1": [
+      "darwin_core_scripts_explain_py_scripts_explain",
+      "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "darwin_core_scripts_explain_py_scripts_explain_main",
+      "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "scripts_explain_load_detailed_terms",
+      "scripts_explain_load_term_names",
+      "scripts_explain_rationale_108",
+      "scripts_explain_rationale_134",
+      "scripts_explain_rationale_28",
+      "scripts_explain_rationale_41",
+      "scripts_explain_rationale_58",
+      "scripts_explain_show_overview"
+    ],
+    "2": [
+      "scripts_explain_list_cta_terms",
+      "scripts_explain_load_terms",
+      "scripts_explain_normalize_term",
+      "scripts_explain_show_cta_overview",
+      "scripts_explain_show_cta_term",
+      "scripts_explain_show_skos_overview",
+      "scripts_explain_show_skosxl_overview",
+      "skos_xl_scripts_explain_py_scripts_explain",
+      "skos_xl_scripts_explain_py_scripts_explain_list_terms",
+      "skos_xl_scripts_explain_py_scripts_explain_main",
+      "skos_xl_scripts_explain_py_scripts_explain_show_term_detail"
+    ],
+    "3": [
+      "cta_vocab",
+      "darwin_core_skill",
+      "dwc_a",
+      "dwc_cm",
+      "dwc_dp",
+      "dwc_validate",
+      "readme_biodiversitydataskills",
+      "skos_generate",
+      "skos_guide",
+      "skos_xl_skill"
+    ],
+    "4": [
+      "scripts_generate",
+      "scripts_generate_bind_common",
+      "scripts_generate_build_basic",
+      "scripts_generate_build_dwc_names",
+      "scripts_generate_build_dwc_vocab",
+      "scripts_generate_build_etno_tk",
+      "scripts_generate_main",
+      "scripts_generate_rationale_135",
+      "scripts_generate_rationale_187",
+      "scripts_generate_rationale_251"
+    ],
+    "5": [
+      "scripts_map_columns",
+      "scripts_map_columns_convert_csv",
+      "scripts_map_columns_load_dwc_terms",
+      "scripts_map_columns_main",
+      "scripts_map_columns_normalize_column_name",
+      "scripts_map_columns_rationale_141",
+      "scripts_map_columns_rationale_155",
+      "scripts_map_columns_rationale_163",
+      "scripts_map_columns_rationale_195",
+      "scripts_map_columns_suggest_mapping"
+    ],
+    "6": [
+      "scripts_convert",
+      "scripts_convert_detect_format",
+      "scripts_convert_downgrade_from_xl",
+      "scripts_convert_main",
+      "scripts_convert_rationale_63",
+      "scripts_convert_rationale_92",
+      "scripts_convert_upgrade_to_xl"
+    ],
+    "7": [
+      "scripts_validate_detect_format",
+      "scripts_validate_label_of",
+      "scripts_validate_rationale_205",
+      "scripts_validate_run_cta_checks",
+      "scripts_validate_run_standard_checks",
+      "skos_xl_scripts_validate_py_scripts_validate",
+      "skos_xl_scripts_validate_py_scripts_validate_main"
+    ],
+    "8": [
+      "scripts_generate_template",
+      "scripts_generate_template_generate_example_csv",
+      "scripts_generate_template_generate_meta_xml",
+      "scripts_generate_template_main",
+      "scripts_generate_template_rationale_101",
+      "scripts_generate_template_rationale_78"
+    ],
+    "9": [
+      "darwin_core_scripts_sync_py_scripts_sync",
+      "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "darwin_core_scripts_sync_py_scripts_sync_main",
+      "scripts_sync_rationale_46"
+    ],
+    "10": [
+      "skos_xl_scripts_sync_py_scripts_sync",
+      "skos_xl_scripts_sync_py_scripts_sync_download_file",
+      "skos_xl_scripts_sync_py_scripts_sync_main"
+    ],
+    "11": [
+      "dwc_explain"
+    ],
+    "12": [
+      "dwc_extensions"
+    ],
+    "13": [
+      "dwc_sync"
+    ],
+    "14": [
+      "skos_validate"
+    ],
+    "15": [
+      "tmp_last_ndc"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2087912087912088,
+    "1": 0.24242424242424243,
+    "2": 0.34545454545454546,
+    "3": 0.24444444444444444,
+    "4": 0.37777777777777777,
+    "5": 0.28888888888888886,
+    "6": 0.42857142857142855,
+    "7": 0.5238095238095238,
+    "8": 0.4666666666666667,
+    "9": 0.6666666666666666,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0
+  },
+  "gods": [
+    {
+      "id": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "label": "main()",
+      "degree": 9
+    },
+    {
+      "id": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "label": "main()",
+      "degree": 7
+    },
+    {
+      "id": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "label": "main()",
+      "degree": 6
+    },
+    {
+      "id": "scripts_generate_bind_common",
+      "label": "bind_common()",
+      "degree": 5
+    },
+    {
+      "id": "scripts_generate_main",
+      "label": "main()",
+      "degree": 5
+    },
+    {
+      "id": "darwin_core_skill",
+      "label": "Darwin Core Skill",
+      "degree": 5
+    },
+    {
+      "id": "scripts_map_columns_suggest_mapping",
+      "label": "suggest_mapping()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_map_columns_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_convert_main",
+      "label": "main()",
+      "degree": 4
+    },
+    {
+      "id": "scripts_generate_build_dwc_vocab",
+      "label": "build_dwc_vocab()",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "biodiversityDataSkills",
+      "target": "Darwin Core Skill",
+      "source_files": [
+        "README.md",
+        "darwin-core/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `biodiversityDataSkills` unexpectedly reaches hub `Darwin Core Skill`"
+    },
+    {
+      "source": "biodiversityDataSkills",
+      "target": "SKOS-XL Skill",
+      "source_files": [
+        "README.md",
+        "skos-xl/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "SKOS-XL Skill",
+      "target": "Darwin Core Skill",
+      "source_files": [
+        "skos-xl/SKILL.md",
+        "darwin-core/SKILL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "conceptually_related_to",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Darwin Core Skill",
+      "target": "Darwin Core Archive (DwC-A)",
+      "source_files": [
+        "darwin-core/SKILL.md",
+        "darwin-core/references/TEXT_GUIDE.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Darwin Core Archive (DwC-A)` unexpectedly reaches hub `Darwin Core Skill`"
+    },
+    {
+      "source": "Darwin Core Skill",
+      "target": "Darwin Core Conceptual Model (DwC-CM)",
+      "source_files": [
+        "darwin-core/SKILL.md",
+        "darwin-core/references/CONCEPTUAL_MODEL.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "peripheral node `Darwin Core Conceptual Model (DwC-CM)` unexpectedly reaches hub `Darwin Core Skill`"
+    }
+  ],
+  "tokens": {
+    "input": 33744,
+    "output": 1853
+  }
+}

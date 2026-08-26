@@ -1,0 +1,2457 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "tdwg_standards_2026",
+        "label": "TDWG Standards Ratified 2026-05-26",
+        "nodes": [
+          "dwc_cm",
+          "dwc_dp"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      },
+      {
+        "id": "cta_workflow",
+        "label": "Traditional Knowledge (CTA) Workflow",
+        "nodes": [
+          "skos_generate",
+          "skos_validate",
+          "cta_vocab"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "skos-xl/SKILL.md"
+      },
+      {
+        "id": "dwc_workflow",
+        "label": "Darwin Core Data Workflow",
+        "nodes": [
+          "dwc_sync",
+          "dwc_explain",
+          "dwc_validate"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "darwin-core/SKILL.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "last-ndc.ts",
+      "file_type": "code",
+      "source_file": ".remember/tmp/last-ndc.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tmp_last_ndc",
+      "community": 15,
+      "norm_label": "last-ndc.ts"
+    },
+    {
+      "label": "explain.py",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_explain_py_scripts_explain",
+      "community": 1,
+      "norm_label": "explain.py"
+    },
+    {
+      "label": "load_term_names()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "scripts_explain_load_term_names",
+      "community": 1,
+      "norm_label": "load_term_names()"
+    },
+    {
+      "label": "load_detailed_terms()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "scripts_explain_load_detailed_terms",
+      "community": 1,
+      "norm_label": "load_detailed_terms()"
+    },
+    {
+      "label": "show_overview()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "scripts_explain_show_overview",
+      "community": 1,
+      "norm_label": "show_overview()"
+    },
+    {
+      "label": "show_term_detail()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "community": 1,
+      "norm_label": "show_term_detail()"
+    },
+    {
+      "label": "list_terms()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L133",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "community": 1,
+      "norm_label": "list_terms()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "community": 1,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Load term names from the simple CSV list (all_dwc_vertical.csv).",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "scripts_explain_rationale_28",
+      "community": 1,
+      "norm_label": "load term names from the simple csv list (all_dwc_vertical.csv)."
+    },
+    {
+      "label": "Load all terms with full metadata (term_versions.csv), deduplicated.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "scripts_explain_rationale_41",
+      "community": 1,
+      "norm_label": "load all terms with full metadata (term_versions.csv), deduplicated."
+    },
+    {
+      "label": "Display a general overview of the Darwin Core standard.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "scripts_explain_rationale_58",
+      "community": 1,
+      "norm_label": "display a general overview of the darwin core standard."
+    },
+    {
+      "label": "Show detailed information for a specific term.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "scripts_explain_rationale_108",
+      "community": 1,
+      "norm_label": "show detailed information for a specific term."
+    },
+    {
+      "label": "List all available terms in columns.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "scripts_explain_rationale_134",
+      "community": 1,
+      "norm_label": "list all available terms in columns."
+    },
+    {
+      "label": "generate_template.py",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_generate_template",
+      "community": 8,
+      "norm_label": "generate_template.py"
+    },
+    {
+      "label": "generate_meta_xml()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "scripts_generate_template_generate_meta_xml",
+      "community": 8,
+      "norm_label": "generate_meta_xml()"
+    },
+    {
+      "label": "generate_example_csv()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "scripts_generate_template_generate_example_csv",
+      "community": 8,
+      "norm_label": "generate_example_csv()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "scripts_generate_template_main",
+      "community": 8,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Generate the content of meta.xml.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "scripts_generate_template_rationale_78",
+      "community": 8,
+      "norm_label": "generate the content of meta.xml."
+    },
+    {
+      "label": "Generate example CSV content with DwC headers.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "scripts_generate_template_rationale_101",
+      "community": 8,
+      "norm_label": "generate example csv content with dwc headers."
+    },
+    {
+      "label": "map_columns.py",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_map_columns",
+      "community": 5,
+      "norm_label": "map_columns.py"
+    },
+    {
+      "label": "load_dwc_terms()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "scripts_map_columns_load_dwc_terms",
+      "community": 5,
+      "norm_label": "load_dwc_terms()"
+    },
+    {
+      "label": "normalize_column_name()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L154",
+      "_origin": "ast",
+      "id": "scripts_map_columns_normalize_column_name",
+      "community": 5,
+      "norm_label": "normalize_column_name()"
+    },
+    {
+      "label": "suggest_mapping()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "scripts_map_columns_suggest_mapping",
+      "community": 5,
+      "norm_label": "suggest_mapping()"
+    },
+    {
+      "label": "convert_csv()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L194",
+      "_origin": "ast",
+      "id": "scripts_map_columns_convert_csv",
+      "community": 5,
+      "norm_label": "convert_csv()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L225",
+      "_origin": "ast",
+      "id": "scripts_map_columns_main",
+      "community": 5,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Load Darwin Core term names from the reference CSV.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "scripts_map_columns_rationale_141",
+      "community": 5,
+      "norm_label": "load darwin core term names from the reference csv."
+    },
+    {
+      "label": "Normalize column name for dictionary lookup.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "scripts_map_columns_rationale_155",
+      "community": 5,
+      "norm_label": "normalize column name for dictionary lookup."
+    },
+    {
+      "label": "Suggest DwC term mapping for each CSV column.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "scripts_map_columns_rationale_163",
+      "community": 5,
+      "norm_label": "suggest dwc term mapping for each csv column."
+    },
+    {
+      "label": "Generate a new CSV with Darwin Core headers.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L195",
+      "_origin": "ast",
+      "id": "scripts_map_columns_rationale_195",
+      "community": 5,
+      "norm_label": "generate a new csv with darwin core headers."
+    },
+    {
+      "label": "sync.py",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_sync_py_scripts_sync",
+      "community": 9,
+      "norm_label": "sync.py"
+    },
+    {
+      "label": "download_file()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "community": 9,
+      "norm_label": "download_file()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_sync_py_scripts_sync_main",
+      "community": 9,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Download a file from URL to destination path.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "scripts_sync_rationale_46",
+      "community": 9,
+      "norm_label": "download a file from url to destination path."
+    },
+    {
+      "label": "validate.py",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_validate_py_scripts_validate",
+      "community": 0,
+      "norm_label": "validate.py"
+    },
+    {
+      "label": "load_valid_terms()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "scripts_validate_load_valid_terms",
+      "community": 0,
+      "norm_label": "load_valid_terms()"
+    },
+    {
+      "label": "validate_zip()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "scripts_validate_validate_zip",
+      "community": 0,
+      "norm_label": "validate_zip()"
+    },
+    {
+      "label": "extract_meta_xml()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "scripts_validate_extract_meta_xml",
+      "community": 0,
+      "norm_label": "extract_meta_xml()"
+    },
+    {
+      "label": "validate_meta_xml()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "scripts_validate_validate_meta_xml",
+      "community": 0,
+      "norm_label": "validate_meta_xml()"
+    },
+    {
+      "label": "validate_referenced_files()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "scripts_validate_validate_referenced_files",
+      "community": 0,
+      "norm_label": "validate_referenced_files()"
+    },
+    {
+      "label": "validate_terms()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "scripts_validate_validate_terms",
+      "community": 0,
+      "norm_label": "validate_terms()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "community": 0,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Load the set of valid Darwin Core term names.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_39",
+      "community": 0,
+      "norm_label": "load the set of valid darwin core term names."
+    },
+    {
+      "label": "Check if the file is a valid ZIP archive.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_54",
+      "community": 0,
+      "norm_label": "check if the file is a valid zip archive."
+    },
+    {
+      "label": "Extract and parse meta.xml from the ZIP.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_63",
+      "community": 0,
+      "norm_label": "extract and parse meta.xml from the zip."
+    },
+    {
+      "label": "Validate the structure of meta.xml.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_79",
+      "community": 0,
+      "norm_label": "validate the structure of meta.xml."
+    },
+    {
+      "label": "Check if all files referenced in meta.xml exist inside the ZIP.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L138",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_138",
+      "community": 0,
+      "norm_label": "check if all files referenced in meta.xml exist inside the zip."
+    },
+    {
+      "label": "Check if all terms used are valid Darwin Core terms.",
+      "file_type": "rationale",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_159",
+      "community": 0,
+      "norm_label": "check if all terms used are valid darwin core terms."
+    },
+    {
+      "label": "convert.py",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_convert",
+      "community": 6,
+      "norm_label": "convert.py"
+    },
+    {
+      "label": "detect_format()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "scripts_convert_detect_format",
+      "community": 6,
+      "norm_label": "detect_format()"
+    },
+    {
+      "label": "upgrade_to_xl()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "scripts_convert_upgrade_to_xl",
+      "community": 6,
+      "norm_label": "upgrade_to_xl()"
+    },
+    {
+      "label": "downgrade_from_xl()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "scripts_convert_downgrade_from_xl",
+      "community": 6,
+      "norm_label": "downgrade_from_xl()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "scripts_convert_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Upgrade plain SKOS labels to SKOS-XL Label resources.",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "scripts_convert_rationale_63",
+      "community": 6,
+      "norm_label": "upgrade plain skos labels to skos-xl label resources."
+    },
+    {
+      "label": "Downgrade SKOS-XL labels to plain SKOS literal labels.",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "scripts_convert_rationale_92",
+      "community": 6,
+      "norm_label": "downgrade skos-xl labels to plain skos literal labels."
+    },
+    {
+      "label": "explain.py",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_explain_py_scripts_explain",
+      "community": 2,
+      "norm_label": "explain.py"
+    },
+    {
+      "label": "load_terms()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "scripts_explain_load_terms",
+      "community": 2,
+      "norm_label": "load_terms()"
+    },
+    {
+      "label": "show_skos_overview()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "scripts_explain_show_skos_overview",
+      "community": 2,
+      "norm_label": "show_skos_overview()"
+    },
+    {
+      "label": "show_skosxl_overview()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L102",
+      "_origin": "ast",
+      "id": "scripts_explain_show_skosxl_overview",
+      "community": 2,
+      "norm_label": "show_skosxl_overview()"
+    },
+    {
+      "label": "normalize_term()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L157",
+      "_origin": "ast",
+      "id": "scripts_explain_normalize_term",
+      "community": 2,
+      "norm_label": "normalize_term()"
+    },
+    {
+      "label": "show_term_detail()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_explain_py_scripts_explain_show_term_detail",
+      "community": 2,
+      "norm_label": "show_term_detail()"
+    },
+    {
+      "label": "list_terms()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_explain_py_scripts_explain_list_terms",
+      "community": 2,
+      "norm_label": "list_terms()"
+    },
+    {
+      "label": "show_cta_overview()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L205",
+      "_origin": "ast",
+      "id": "scripts_explain_show_cta_overview",
+      "community": 2,
+      "norm_label": "show_cta_overview()"
+    },
+    {
+      "label": "show_cta_term()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L269",
+      "_origin": "ast",
+      "id": "scripts_explain_show_cta_term",
+      "community": 2,
+      "norm_label": "show_cta_term()"
+    },
+    {
+      "label": "list_cta_terms()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L287",
+      "_origin": "ast",
+      "id": "scripts_explain_list_cta_terms",
+      "community": 2,
+      "norm_label": "list_cta_terms()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L307",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "community": 2,
+      "norm_label": "main()"
+    },
+    {
+      "label": "generate.py",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "scripts_generate",
+      "community": 4,
+      "norm_label": "generate.py"
+    },
+    {
+      "label": "bind_common()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "scripts_generate_bind_common",
+      "community": 4,
+      "norm_label": "bind_common()"
+    },
+    {
+      "label": "build_basic()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "scripts_generate_build_basic",
+      "community": 4,
+      "norm_label": "build_basic()"
+    },
+    {
+      "label": "build_dwc_vocab()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L134",
+      "_origin": "ast",
+      "id": "scripts_generate_build_dwc_vocab",
+      "community": 4,
+      "norm_label": "build_dwc_vocab()"
+    },
+    {
+      "label": "build_dwc_names()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L186",
+      "_origin": "ast",
+      "id": "scripts_generate_build_dwc_names",
+      "community": 4,
+      "norm_label": "build_dwc_names()"
+    },
+    {
+      "label": "build_etno_tk()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "scripts_generate_build_etno_tk",
+      "community": 4,
+      "norm_label": "build_etno_tk()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L443",
+      "_origin": "ast",
+      "id": "scripts_generate_main",
+      "community": 4,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Template for a DwC controlled vocabulary (e.g. basisOfRecord values).",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L135",
+      "_origin": "ast",
+      "id": "scripts_generate_rationale_135",
+      "community": 4,
+      "norm_label": "template for a dwc controlled vocabulary (e.g. basisofrecord values)."
+    },
+    {
+      "label": "Template: TDWG TAG NameThing pattern for taxonomic names (SKOS-XL).     Referenc",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "scripts_generate_rationale_187",
+      "community": 4,
+      "norm_label": "template: tdwg tag namething pattern for taxonomic names (skos-xl).     referenc"
+    },
+    {
+      "label": "Template: Traditional Knowledge (CTA) vocabulary.      Pattern: EtnoTermos / JBR",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L251",
+      "_origin": "ast",
+      "id": "scripts_generate_rationale_251",
+      "community": 4,
+      "norm_label": "template: traditional knowledge (cta) vocabulary.      pattern: etnotermos / jbr"
+    },
+    {
+      "label": "sync.py",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_sync_py_scripts_sync",
+      "community": 10,
+      "norm_label": "sync.py"
+    },
+    {
+      "label": "download_file()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_sync_py_scripts_sync_download_file",
+      "community": 10,
+      "norm_label": "download_file()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_sync_py_scripts_sync_main",
+      "community": 10,
+      "norm_label": "main()"
+    },
+    {
+      "label": "validate.py",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_validate_py_scripts_validate",
+      "community": 7,
+      "norm_label": "validate.py"
+    },
+    {
+      "label": "detect_format()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "scripts_validate_detect_format",
+      "community": 7,
+      "norm_label": "detect_format()"
+    },
+    {
+      "label": "label_of()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "scripts_validate_label_of",
+      "community": 7,
+      "norm_label": "label_of()"
+    },
+    {
+      "label": "run_standard_checks()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "scripts_validate_run_standard_checks",
+      "community": 7,
+      "norm_label": "run_standard_checks()"
+    },
+    {
+      "label": "run_cta_checks()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L204",
+      "_origin": "ast",
+      "id": "scripts_validate_run_cta_checks",
+      "community": 7,
+      "norm_label": "run_cta_checks()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L312",
+      "_origin": "ast",
+      "id": "skos_xl_scripts_validate_py_scripts_validate_main",
+      "community": 7,
+      "norm_label": "main()"
+    },
+    {
+      "label": "Additional checks for Traditional Knowledge (CTA) vocabularies.     Based on CAR",
+      "file_type": "rationale",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L205",
+      "_origin": "ast",
+      "id": "scripts_validate_rationale_205",
+      "community": 7,
+      "norm_label": "additional checks for traditional knowledge (cta) vocabularies.     based on car"
+    },
+    {
+      "label": "biodiversityDataSkills",
+      "file_type": "code",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_biodiversitydataskills",
+      "community": 3,
+      "norm_label": "biodiversitydataskills"
+    },
+    {
+      "label": "Darwin Core Skill",
+      "file_type": "code",
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "biodiversityDataSkills",
+      "contributor": null,
+      "id": "darwin_core_skill",
+      "community": 3,
+      "norm_label": "darwin core skill"
+    },
+    {
+      "label": "SKOS-XL Skill",
+      "file_type": "code",
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "biodiversityDataSkills",
+      "contributor": null,
+      "id": "skos_xl_skill",
+      "community": 3,
+      "norm_label": "skos-xl skill"
+    },
+    {
+      "label": "Darwin Core Conceptual Model (DwC-CM)",
+      "file_type": "paper",
+      "source_file": "darwin-core/references/CONCEPTUAL_MODEL.md",
+      "source_location": null,
+      "source_url": "https://dwc.tdwg.org/cm/",
+      "captured_at": null,
+      "author": "Darwin Core Maintenance Group",
+      "contributor": null,
+      "id": "dwc_cm",
+      "community": 3,
+      "norm_label": "darwin core conceptual model (dwc-cm)"
+    },
+    {
+      "label": "Darwin Core Data Package (DwC-DP)",
+      "file_type": "paper",
+      "source_file": "darwin-core/references/DATA_PACKAGE_GUIDE.md",
+      "source_location": null,
+      "source_url": "https://dwc.tdwg.org/dp/",
+      "captured_at": null,
+      "author": "Darwin Core Maintenance Group",
+      "contributor": null,
+      "id": "dwc_dp",
+      "community": 3,
+      "norm_label": "darwin core data package (dwc-dp)"
+    },
+    {
+      "label": "Darwin Core Archive (DwC-A)",
+      "file_type": "paper",
+      "source_file": "darwin-core/references/TEXT_GUIDE.md",
+      "source_location": null,
+      "source_url": "http://rs.tdwg.org/dwc/terms/guides/text/",
+      "captured_at": null,
+      "author": "Darwin Core Maintenance Group",
+      "contributor": null,
+      "id": "dwc_a",
+      "community": 3,
+      "norm_label": "darwin core archive (dwc-a)"
+    },
+    {
+      "label": "SKOS & SKOS-XL Quick Reference Guide",
+      "file_type": "document",
+      "source_file": "skos-xl/references/SKOS_GUIDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skos_guide",
+      "community": 3,
+      "norm_label": "skos & skos-xl quick reference guide"
+    },
+    {
+      "label": "Darwin Core Extensions",
+      "file_type": "document",
+      "source_file": "darwin-core/references/EXTENSIONS.md",
+      "source_location": null,
+      "source_url": "https://rs.gbif.org/extensions.html",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dwc_extensions",
+      "community": 12,
+      "norm_label": "darwin core extensions"
+    },
+    {
+      "label": "Traditional Knowledge (CTA) Vocabularies",
+      "file_type": "concept",
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "cta_vocab",
+      "community": 3,
+      "norm_label": "traditional knowledge (cta) vocabularies"
+    },
+    {
+      "label": "darwin-core/scripts/sync.py",
+      "file_type": "code",
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dwc_sync",
+      "community": 13,
+      "norm_label": "darwin-core/scripts/sync.py"
+    },
+    {
+      "label": "darwin-core/scripts/explain.py",
+      "file_type": "code",
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dwc_explain",
+      "community": 11,
+      "norm_label": "darwin-core/scripts/explain.py"
+    },
+    {
+      "label": "darwin-core/scripts/validate.py",
+      "file_type": "code",
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "dwc_validate",
+      "community": 3,
+      "norm_label": "darwin-core/scripts/validate.py"
+    },
+    {
+      "label": "skos-xl/scripts/validate.py",
+      "file_type": "code",
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skos_validate",
+      "community": 14,
+      "norm_label": "skos-xl/scripts/validate.py"
+    },
+    {
+      "label": "skos-xl/scripts/generate.py",
+      "file_type": "code",
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "skos_generate",
+      "community": 3,
+      "norm_label": "skos-xl/scripts/generate.py"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_load_detailed_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_load_term_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_show_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_load_term_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "scripts_explain_rationale_28",
+      "target": "scripts_explain_load_term_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_load_detailed_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "scripts_explain_rationale_41",
+      "target": "scripts_explain_load_detailed_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_show_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "scripts_explain_rationale_58",
+      "target": "scripts_explain_show_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "scripts_explain_rationale_108",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_show_term_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_explain_py_scripts_explain_main",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/explain.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "scripts_explain_rationale_134",
+      "target": "darwin_core_scripts_explain_py_scripts_explain_list_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "scripts_generate_template",
+      "target": "scripts_generate_template_generate_example_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "scripts_generate_template",
+      "target": "scripts_generate_template_generate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "scripts_generate_template",
+      "target": "scripts_generate_template_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "scripts_generate_template_main",
+      "target": "scripts_generate_template_generate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "scripts_generate_template_rationale_78",
+      "target": "scripts_generate_template_generate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "scripts_generate_template_main",
+      "target": "scripts_generate_template_generate_example_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/generate_template.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "source": "scripts_generate_template_rationale_101",
+      "target": "scripts_generate_template_generate_example_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "scripts_map_columns",
+      "target": "scripts_map_columns_convert_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "scripts_map_columns",
+      "target": "scripts_map_columns_load_dwc_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "scripts_map_columns",
+      "target": "scripts_map_columns_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "scripts_map_columns",
+      "target": "scripts_map_columns_normalize_column_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "scripts_map_columns",
+      "target": "scripts_map_columns_suggest_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "scripts_map_columns_main",
+      "target": "scripts_map_columns_load_dwc_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "scripts_map_columns_rationale_141",
+      "target": "scripts_map_columns_load_dwc_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "scripts_map_columns_rationale_155",
+      "target": "scripts_map_columns_normalize_column_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "scripts_map_columns_suggest_mapping",
+      "target": "scripts_map_columns_normalize_column_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "scripts_map_columns_main",
+      "target": "scripts_map_columns_suggest_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "scripts_map_columns_rationale_163",
+      "target": "scripts_map_columns_suggest_mapping",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L300",
+      "weight": 1.0,
+      "source": "scripts_map_columns_main",
+      "target": "scripts_map_columns_convert_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/map_columns.py",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "scripts_map_columns_rationale_195",
+      "target": "scripts_map_columns_convert_csv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_sync_py_scripts_sync",
+      "target": "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_sync_py_scripts_sync",
+      "target": "darwin_core_scripts_sync_py_scripts_sync_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_sync_py_scripts_sync_main",
+      "target": "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/sync.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "scripts_sync_rationale_46",
+      "target": "darwin_core_scripts_sync_py_scripts_sync_download_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_extract_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_load_valid_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_validate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_validate_referenced_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_validate_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_validate_zip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_load_valid_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_39",
+      "target": "scripts_validate_load_valid_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_validate_zip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_54",
+      "target": "scripts_validate_validate_zip",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_extract_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_63",
+      "target": "scripts_validate_extract_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_validate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_79",
+      "target": "scripts_validate_validate_meta_xml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_validate_referenced_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_138",
+      "target": "scripts_validate_validate_referenced_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L236",
+      "weight": 1.0,
+      "source": "darwin_core_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_validate_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "darwin-core/scripts/validate.py",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_159",
+      "target": "scripts_validate_validate_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "scripts_convert",
+      "target": "scripts_convert_detect_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "scripts_convert",
+      "target": "scripts_convert_downgrade_from_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "scripts_convert",
+      "target": "scripts_convert_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "scripts_convert",
+      "target": "scripts_convert_upgrade_to_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "scripts_convert_main",
+      "target": "scripts_convert_detect_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "scripts_convert_main",
+      "target": "scripts_convert_upgrade_to_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "scripts_convert_rationale_63",
+      "target": "scripts_convert_upgrade_to_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "scripts_convert_main",
+      "target": "scripts_convert_downgrade_from_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/convert.py",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "scripts_convert_rationale_92",
+      "target": "scripts_convert_downgrade_from_xl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_list_cta_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_load_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_normalize_term",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_show_cta_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L269",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_show_cta_term",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_show_skos_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "scripts_explain_show_skosxl_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "skos_xl_scripts_explain_py_scripts_explain_list_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L307",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain",
+      "target": "skos_xl_scripts_explain_py_scripts_explain_show_term_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L323",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_load_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L347",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_show_skos_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L338",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_show_skosxl_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_show_term_detail",
+      "target": "scripts_explain_normalize_term",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L334",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "skos_xl_scripts_explain_py_scripts_explain_show_term_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L336",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "skos_xl_scripts_explain_py_scripts_explain_list_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_show_cta_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L325",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_show_cta_term",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/explain.py",
+      "source_location": "L327",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_explain_py_scripts_explain_main",
+      "target": "scripts_explain_list_cta_terms",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_bind_common",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_build_basic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_build_dwc_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_build_dwc_vocab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_build_etno_tk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L443",
+      "weight": 1.0,
+      "source": "scripts_generate",
+      "target": "scripts_generate_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "scripts_generate_build_basic",
+      "target": "scripts_generate_bind_common",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L192",
+      "weight": 1.0,
+      "source": "scripts_generate_build_dwc_names",
+      "target": "scripts_generate_bind_common",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "scripts_generate_build_dwc_vocab",
+      "target": "scripts_generate_bind_common",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L271",
+      "weight": 1.0,
+      "source": "scripts_generate_build_etno_tk",
+      "target": "scripts_generate_bind_common",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L492",
+      "weight": 1.0,
+      "source": "scripts_generate_main",
+      "target": "scripts_generate_build_basic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L486",
+      "weight": 1.0,
+      "source": "scripts_generate_main",
+      "target": "scripts_generate_build_dwc_vocab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "source": "scripts_generate_rationale_135",
+      "target": "scripts_generate_build_dwc_vocab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L488",
+      "weight": 1.0,
+      "source": "scripts_generate_main",
+      "target": "scripts_generate_build_dwc_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "scripts_generate_rationale_187",
+      "target": "scripts_generate_build_dwc_names",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L490",
+      "weight": 1.0,
+      "source": "scripts_generate_main",
+      "target": "scripts_generate_build_etno_tk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/generate.py",
+      "source_location": "L251",
+      "weight": 1.0,
+      "source": "scripts_generate_rationale_251",
+      "target": "scripts_generate_build_etno_tk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_sync_py_scripts_sync",
+      "target": "skos_xl_scripts_sync_py_scripts_sync_download_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_sync_py_scripts_sync",
+      "target": "skos_xl_scripts_sync_py_scripts_sync_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/sync.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_sync_py_scripts_sync_main",
+      "target": "skos_xl_scripts_sync_py_scripts_sync_download_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_detect_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_label_of",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L204",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_run_cta_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate",
+      "target": "scripts_validate_run_standard_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate",
+      "target": "skos_xl_scripts_validate_py_scripts_validate_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L334",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_detect_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L221",
+      "weight": 1.0,
+      "source": "scripts_validate_run_cta_checks",
+      "target": "scripts_validate_label_of",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L94",
+      "weight": 1.0,
+      "source": "scripts_validate_run_standard_checks",
+      "target": "scripts_validate_label_of",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L344",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_run_standard_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "scripts_validate_rationale_205",
+      "target": "scripts_validate_run_cta_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "skos-xl/scripts/validate.py",
+      "source_location": "L347",
+      "weight": 1.0,
+      "source": "skos_xl_scripts_validate_py_scripts_validate_main",
+      "target": "scripts_validate_run_cta_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_biodiversitydataskills",
+      "target": "darwin_core_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_biodiversitydataskills",
+      "target": "skos_xl_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "darwin_core_skill",
+      "target": "dwc_a"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "darwin_core_skill",
+      "target": "dwc_cm"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "darwin_core_skill",
+      "target": "dwc_dp"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "skos_xl_skill",
+      "target": "darwin_core_skill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "skos_xl_skill",
+      "target": "cta_vocab"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "skos_xl_skill",
+      "target": "skos_guide"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "darwin-core/references/DATA_PACKAGE_GUIDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dwc_dp",
+      "target": "dwc_cm"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "darwin-core/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "dwc_validate",
+      "target": "dwc_a"
+    },
+    {
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "skos-xl/SKILL.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "skos_generate",
+      "target": "cta_vocab"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "tdwg_standards_2026",
+      "label": "TDWG Standards Ratified 2026-05-26",
+      "nodes": [
+        "dwc_cm",
+        "dwc_dp"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "cta_workflow",
+      "label": "Traditional Knowledge (CTA) Workflow",
+      "nodes": [
+        "skos_generate",
+        "skos_validate",
+        "cta_vocab"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "skos-xl/SKILL.md"
+    },
+    {
+      "id": "dwc_workflow",
+      "label": "Darwin Core Data Workflow",
+      "nodes": [
+        "dwc_sync",
+        "dwc_explain",
+        "dwc_validate"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "darwin-core/SKILL.md"
+    }
+  ],
+  "built_at_commit": "effdfa8dc0e9b29e6c2dbed9d1c7a111b6f41b83"
+}

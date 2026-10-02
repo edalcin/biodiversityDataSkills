@@ -14,6 +14,7 @@ npx skills add https://github.com/edalcin/biodiversityDataSkills --skill biohous
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill grist-master
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill DataProvenance
 npx skills add https://github.com/edalcin/biodiversityDataSkills --skill iczn
+npx skills add https://github.com/edalcin/biodiversityDataSkills --skill ipt
 ```
 
 Or install every skill in the repo at once:
@@ -34,6 +35,7 @@ Each skill has its own Python dependencies — see that skill's **Setup** sectio
 | [grist-master](./grist-master/) | Reference knowledge for [Grist](https://www.getgrist.com/) — REST/SQL API, MCP server, Python formulas, access rules, self-hosting | none (pure reference) |
 | [DataProvenance](./DataProvenance/) | Reference knowledge for the [W3C PROV](https://www.w3.org/TR/prov-overview/) standard — PROV-DM, PROV-O (RDF), PROV-N (notation), PROV-XML, for documenting dataset lineage | none (pure reference) |
 | [iczn](./iczn/) | Reference knowledge for the [International Code of Zoological Nomenclature](https://code.iczn.org/) — availability, priority, homonymy, typification, ZooBank/electronic publication, and a name/taxon/act data model for taxonomic databases | none (pure reference) |
+| [ipt](./ipt/) | Check, report and fix the health of [GBIF IPT](https://github.com/gbif/ipt) instances and their published resources — endpoints, administration, publishing, versions, and all gbif/ipt issues distilled into troubleshooting tables | none (Python stdlib) |
 
 ## Skills Interoperability
 
@@ -53,6 +55,8 @@ The two skills complement each other. Darwin Core defines **what fields** a biod
 | Restructure a legacy spreadsheet's columns to match Darwin Core, with composite-field splitting | biohousekeeper (`analyze.py` + `apply.py`) |
 | Check whether a zoological name is available/valid and cite the governing ICZN Article | iczn (`validate_name.py`, `explain.py`) |
 | Map ICZN nomenclatural concepts to Darwin Core `nomenclaturalStatus`/`taxonomicStatus` | iczn + darwin-core |
+| Audit an IPT instance and its datasets against the GBIF Registry, and republish a failed resource | ipt (`ipt_health.py check` / `publish`) |
+| Validate a DwC-A downloaded from an IPT `archive.do` URL | ipt + darwin-core (`validate.py`) |
 
 ---
 
@@ -486,6 +490,58 @@ python biohousekeeper/scripts/apply.py my_spreadsheet.xlsx --plan my_spreadsheet
 ### Scope
 
 `biohousekeeper` handles column-level renaming and single-column split/merge/drop operations on one sheet. It does not perform full DwC-DP multi-table normalization (splitting a flat sheet into separate event/occurrence/taxon tables) — use `darwin-core`'s DwC-DP guide for that once the column-level cleanup is done.
+
+---
+
+## ipt
+
+This skill helps IPT administrators and data managers keep a [GBIF Integrated Publishing Toolkit](https://www.gbif.org/ipt) installation healthy. It knows every endpoint an IPT exposes (public portal, `/inventory/v2/dataset`, `/api/resources`, `/manager-api/resources`, `/api/health`, `manage/` and `admin/` actions, login + CSRF), the data directory layout, administration and upgrade rules, the resource publishing lifecycle, and ~2600 [gbif/ipt issues](https://github.com/gbif/ipt/issues) distilled into symptom → cause → fix tables.
+
+### Setup
+
+Python 3.9+, standard library only — no `pip install`. Credentials for authenticated checks come only from environment variables:
+
+| Variable | Use |
+|---|---|
+| `IPT_URL` | Default base URL (optional; can be given as an argument) |
+| `IPT_USER` | Login e-mail of an IPT Manager/Admin account (optional) |
+| `IPT_PASSWORD` | Password of that account (optional) |
+| `GITHUB_TOKEN` | Only for `sync_issues.py` if the GitHub API rate limit is hit |
+
+### Scripts
+
+```bash
+# Health check: public + GBIF Registry cross-checks; exit 1 if any ERROR
+python ipt/scripts/ipt_health.py check https://ipt.example.org/ipt
+python ipt/scripts/ipt_health.py check https://ipt.example.org/ipt --resource myshortname --json
+
+# Add authenticated checks (private resources, blocked publication, last report, admin log)
+IPT_USER=<email> IPT_PASSWORD=<password> python ipt/scripts/ipt_health.py check https://ipt.example.org/ipt
+
+# List resources with records, last/next publication, status and GBIF key
+python ipt/scripts/ipt_health.py resources https://ipt.example.org/ipt
+
+# Read the last publication report, then (fix) republish a resource
+python ipt/scripts/ipt_health.py report  https://ipt.example.org/ipt --resource myshortname
+python ipt/scripts/ipt_health.py publish https://ipt.example.org/ipt --resource myshortname --yes
+
+# Refresh the bundled index of gbif/ipt issues
+python ipt/scripts/sync_issues.py
+```
+
+Each finding has a stable check ID (`IPT-*`, `RES-*`, `GBIF-*`, `AUTH-*`, `LOG-*`) documented with causes and fixes in [`ipt/references/health-checks.md`](ipt/references/health-checks.md). `publish` is the only state-changing command and refuses to run without `--yes`.
+
+### Reference files
+
+| File | Content |
+|---|---|
+| `references/health-checks.md` | Check catalogue and manual triage runbooks |
+| `references/endpoints.md` | Every IPT URL: auth level, parameters, response shape, mutating flag; GBIF API; data directory |
+| `references/administration.md` | Install, configuration, registration, users, DOI, logging, backup, upgrade, proxy, memory |
+| `references/resources-publishing.md` | Resource lifecycle from source to GBIF registration |
+| `references/releases.md` | Version history and upgrade rules |
+| `references/known-issues.md` | Troubleshooting tables from all gbif/ipt issues |
+| `references/issues-index.tsv` | Index of all gbif/ipt issues |
 
 ---
 
